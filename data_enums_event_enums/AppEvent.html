@@ -129,7 +129,7 @@
 
 </dt>
 <dd>
-  <p>SESSION EVENTS</p>
+  <p>SESSION &amp; AUTH EVENTS</p>
   
 
     <div>
@@ -152,6 +152,111 @@
     </div>
 </dd>
 
+            <dt id="sessionTimeout" class="constant">
+    <span class="name ">sessionTimeout</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;SESSION TIMEOUT&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="biometricsEnabled" class="constant">
+    <span class="name ">biometricsEnabled</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BIOMETRICS ENABLED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="biometricsDisabled" class="constant">
+    <span class="name ">biometricsDisabled</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BIOMETRICS DISABLED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="passwordChanged" class="constant">
+    <span class="name ">passwordChanged</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;PASSWORD CHANGED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="pinChanged" class="constant">
+    <span class="name ">pinChanged</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;PIN CHANGED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="deviceRegistered" class="constant">
+    <span class="name ">deviceRegistered</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;DEVICE REGISTERED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="deviceDeregistered" class="constant">
+    <span class="name ">deviceDeregistered</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;DEVICE DEREGISTERED&quot;)</code></span>
+    </div>
+</dd>
+
             <dt id="switchedTheme" class="constant">
     <span class="name ">switchedTheme</span>
   <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
@@ -159,7 +264,7 @@
 
 </dt>
 <dd>
-  <p>SWITCH EVENTS</p>
+  <p>PREFERENCES &amp; SETTINGS EVENTS</p>
   
 
     <div>
@@ -182,21 +287,6 @@
     </div>
 </dd>
 
-            <dt id="createdccount" class="constant">
-    <span class="name ">createdccount</span>
-  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
-  
-
-</dt>
-<dd>
-  <p>CREATE EVERNTS</p>
-  
-
-    <div>
-      <span class="signature"><code>const AppEvent(&quot;CREATED NEW ACCOUNT&quot;)</code></span>
-    </div>
-</dd>
-
             <dt id="toggleRememberMe" class="constant">
     <span class="name ">toggleRememberMe</span>
   <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
@@ -204,26 +294,731 @@
 
 </dt>
 <dd>
-  <p>TOOGLE EVENTS</p>
+  
   
 
     <div>
-      <span class="signature"><code>const AppEvent(&quot;CLICKED REMEMEMBER ME BUTTON&quot;)</code></span>
+      <span class="signature"><code>const AppEvent(&quot;CLICKED REMEMBER ME BUTTON&quot;)</code></span>
     </div>
 </dd>
 
-            <dt id="selectedAudioFIle" class="constant">
-    <span class="name ">selectedAudioFIle</span>
+            <dt id="createdAccount" class="constant">
+    <span class="name ">createdAccount</span>
   <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
   
 
 </dt>
 <dd>
-  <p>SELECT EVENTS</p>
+  <p>ACCOUNT MANAGEMENT EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;CREATED NEW ACCOUNT&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="updatedProfile" class="constant">
+    <span class="name ">updatedProfile</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;UPDATED PROFILE&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="accountStatementRequested" class="constant">
+    <span class="name ">accountStatementRequested</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;ACCOUNT STATEMENT REQUESTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="accountStatementDownloaded" class="constant">
+    <span class="name ">accountStatementDownloaded</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;ACCOUNT STATEMENT DOWNLOADED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="transferInitiated" class="constant">
+    <span class="name ">transferInitiated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>TRANSFER &amp; PAYMENT EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;TRANSFER INITIATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="transferCompleted" class="constant">
+    <span class="name ">transferCompleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;TRANSFER COMPLETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="transferFailed" class="constant">
+    <span class="name ">transferFailed</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;TRANSFER FAILED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="bulkTransferInitiated" class="constant">
+    <span class="name ">bulkTransferInitiated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BULK TRANSFER INITIATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="bulkTransferCompleted" class="constant">
+    <span class="name ">bulkTransferCompleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BULK TRANSFER COMPLETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="bulkTransferFailed" class="constant">
+    <span class="name ">bulkTransferFailed</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BULK TRANSFER FAILED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="billPaymentInitiated" class="constant">
+    <span class="name ">billPaymentInitiated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BILL PAYMENT INITIATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="billPaymentCompleted" class="constant">
+    <span class="name ">billPaymentCompleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BILL PAYMENT COMPLETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="billPaymentFailed" class="constant">
+    <span class="name ">billPaymentFailed</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BILL PAYMENT FAILED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="airtimePurchaseInitiated" class="constant">
+    <span class="name ">airtimePurchaseInitiated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;AIRTIME PURCHASE INITIATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="airtimePurchaseCompleted" class="constant">
+    <span class="name ">airtimePurchaseCompleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;AIRTIME PURCHASE COMPLETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="airtimePurchaseFailed" class="constant">
+    <span class="name ">airtimePurchaseFailed</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;AIRTIME PURCHASE FAILED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="beneficiaryAdded" class="constant">
+    <span class="name ">beneficiaryAdded</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>BENEFICIARY MANAGEMENT EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BENEFICIARY ADDED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="beneficiaryEdited" class="constant">
+    <span class="name ">beneficiaryEdited</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BENEFICIARY EDITED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="beneficiaryDeleted" class="constant">
+    <span class="name ">beneficiaryDeleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;BENEFICIARY DELETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="cardRequested" class="constant">
+    <span class="name ">cardRequested</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>CARD MANAGEMENT EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;CARD REQUESTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="cardActivated" class="constant">
+    <span class="name ">cardActivated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;CARD ACTIVATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="cardBlocked" class="constant">
+    <span class="name ">cardBlocked</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;CARD BLOCKED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="cardUnblocked" class="constant">
+    <span class="name ">cardUnblocked</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;CARD UNBLOCKED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="cardPinChanged" class="constant">
+    <span class="name ">cardPinChanged</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;CARD PIN CHANGED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="cardLimitsUpdated" class="constant">
+    <span class="name ">cardLimitsUpdated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;CARD LIMITS UPDATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="loanRequested" class="constant">
+    <span class="name ">loanRequested</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>LOAN MANAGEMENT EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LOAN REQUESTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="loanRepaid" class="constant">
+    <span class="name ">loanRepaid</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LOAN REPAID&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="invoiceCreated" class="constant">
+    <span class="name ">invoiceCreated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>BUSINESS BANKING EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;INVOICE CREATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="payrollProcessed" class="constant">
+    <span class="name ">payrollProcessed</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;PAYROLL PROCESSED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="transactionApproved" class="constant">
+    <span class="name ">transactionApproved</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;TRANSACTION APPROVED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="transactionRejected" class="constant">
+    <span class="name ">transactionRejected</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;TRANSACTION REJECTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="transactionPendingApproval" class="constant">
+    <span class="name ">transactionPendingApproval</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;TRANSACTION PENDING APPROVAL&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kycStarted" class="constant">
+    <span class="name ">kycStarted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>KYC &amp; VERIFICATION EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;KYC STARTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kycCompleted" class="constant">
+    <span class="name ">kycCompleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;KYC COMPLETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="kycFailed" class="constant">
+    <span class="name ">kycFailed</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;KYC FAILED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="livenessCheckInitiated" class="constant">
+    <span class="name ">livenessCheckInitiated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LIVENESS CHECK INITIATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="livenessCheckCompleted" class="constant">
+    <span class="name ">livenessCheckCompleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LIVENESS CHECK COMPLETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="documentSubmitted" class="constant">
+    <span class="name ">documentSubmitted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>DOCUMENT SUBMISSION EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;DOCUMENT SUBMITTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="documentVerified" class="constant">
+    <span class="name ">documentVerified</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;DOCUMENT VERIFIED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="documentRejected" class="constant">
+    <span class="name ">documentRejected</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;DOCUMENT REJECTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="lessonStarted" class="constant">
+    <span class="name ">lessonStarted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>LEARNING &amp; LESSON EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LESSON STARTED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="lessonCompleted" class="constant">
+    <span class="name ">lessonCompleted</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LESSON COMPLETED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="lessonPaused" class="constant">
+    <span class="name ">lessonPaused</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LESSON PAUSED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="liveChatInitiated" class="constant">
+    <span class="name ">liveChatInitiated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>CUSTOMER SUPPORT EVENTS</p>
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;LIVE CHAT INITIATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="supportTicketCreated" class="constant">
+    <span class="name ">supportTicketCreated</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;SUPPORT TICKET CREATED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="faqViewed" class="constant">
+    <span class="name ">faqViewed</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;FAQ VIEWED&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="selectedAudioFile" class="constant">
+    <span class="name ">selectedAudioFile</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  <p>FILE SELECTION EVENTS</p>
   
 
     <div>
       <span class="signature"><code>const AppEvent(&quot;SELECTED AUDIO FROM DISK&quot;)</code></span>
+    </div>
+</dd>
+
+            <dt id="selectedVideoFile" class="constant">
+    <span class="name ">selectedVideoFile</span>
+  <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+    <div>
+      <span class="signature"><code>const AppEvent(&quot;SELECTED VIDEO FROM DISK&quot;)</code></span>
     </div>
 </dd>
 
@@ -242,18 +1037,18 @@
     </div>
 </dd>
 
-            <dt id="updatedProfile" class="constant">
-    <span class="name ">updatedProfile</span>
+            <dt id="selectedImageFile" class="constant">
+    <span class="name ">selectedImageFile</span>
   <span class="signature">&#8594; const <a href="../data_enums_event_enums/AppEvent.html">AppEvent</a></span>
   
 
 </dt>
 <dd>
-  <p>UPDATE EVENTS</p>
+  
   
 
     <div>
-      <span class="signature"><code>const AppEvent(&quot;UPDATED PROFILE&quot;)</code></span>
+      <span class="signature"><code>const AppEvent(&quot;SELECTED IMAGE FROM DISK&quot;)</code></span>
     </div>
 </dd>
 

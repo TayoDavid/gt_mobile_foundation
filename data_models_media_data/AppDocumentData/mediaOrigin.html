@@ -59,7 +59,7 @@
   <section id="getter">
     <section class="multi-line-signature">
       
-      <span class="returntype"><a href="../../data_enums_media_enums/MediaOrigin.html">MediaOrigin</a></span>
+      <span class="returntype"><a href="../../data_enums_media_enums/AppMediaOrigin.html">AppMediaOrigin</a></span>
       get
       <span class="name ">mediaOrigin</span>
       
@@ -70,17 +70,17 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">MediaOrigin get mediaOrigin {
-  if (document is File) return MediaOrigin.file;
-  if (document is Uint8List) return MediaOrigin.memory;
+  <pre class="language-dart"><code class="language-dart">AppMediaOrigin get mediaOrigin {
+  if (document is File) return .file;
+  if (document is Uint8List) return .memory;
   if (document is String) {
     if (AppRegex.urlRegex.hasMatch(document as String)) {
-      return MediaOrigin.network;
+      return .network;
     }
-    return MediaOrigin.asset;
+    return .asset;
   }
 
-  return MediaOrigin.invalid;
+  return .invalid;
 }</code></pre>
 </section>
 

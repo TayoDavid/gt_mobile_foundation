@@ -54,7 +54,7 @@
 
     
 <section class="desc markdown">
-  <p>A plugin specifically designed for picking image files from the file system.</p>
+  <p>A plugin specifically designed for picking and capturing image files from the device.</p>
 </section>
 
 
@@ -164,15 +164,41 @@
   <section class="summary offset-anchor" id="static-methods">
     <h2>Static Methods</h2>
     <dl class="callables">
-        <dt id="pickImage" class="callable">
-  <span class="name"><a href="../services_fs_app_image_plugin/AppImagePlugin/pickImage.html">pickImage</a></span><span class="signature">(<wbr>)
+        <dt id="captureImage" class="callable">
+  <span class="name"><a href="../services_fs_app_image_plugin/AppImagePlugin/captureImage.html">captureImage</a></span><span class="signature">(<wbr>{<span class="parameter" id="captureImage-param-imageQuality"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imageQuality</span>, </span><span class="parameter" id="captureImage-param-maxWidth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">maxWidth</span>, </span><span class="parameter" id="captureImage-param-maxHeight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">maxHeight</span>, </span><span class="parameter" id="captureImage-param-cameraOption"><span class="type-annotation"><a href="../services_fs_app_image_plugin/ImageCameraOption.html">ImageCameraOption</a></span> <span class="parameter-name">cameraOption</span> = <span class="default-value">.back</span></span>})
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_fs_data_responses_file_system_response/FsResponse-class.html">FsResponse</a></span>&gt;</span></span>
   </span>
   
 
 </dt>
 <dd>
-  Opens the device's native file picker configured specifically to select an image file.
+  Opens the device's camera to capture a new image.
+  
+
+</dd>
+
+        <dt id="pickImage" class="callable">
+  <span class="name"><a href="../services_fs_app_image_plugin/AppImagePlugin/pickImage.html">pickImage</a></span><span class="signature">(<wbr>{<span class="parameter" id="pickImage-param-imageQuality"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imageQuality</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_fs_data_responses_file_system_response/FsResponse-class.html">FsResponse</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Opens the device's native file picker configured specifically to select a single image file.
+  
+
+</dd>
+
+        <dt id="pickImages" class="callable">
+  <span class="name"><a href="../services_fs_app_image_plugin/AppImagePlugin/pickImages.html">pickImages</a></span><span class="signature">(<wbr>{<span class="parameter" id="pickImages-param-limit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">5</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_fs_data_responses_file_system_response/FsResponse-class.html">FsResponse</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Opens the device's native file picker to select multiple image files.
   
 
 </dd>

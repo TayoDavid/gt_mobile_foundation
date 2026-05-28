@@ -93,20 +93,38 @@ TextEditingValue formatEditUpdate(
         composing: TextRange.empty,
       );
     }
+
     final amount = newValue.text.isNotEmpty
         ? newValue.text.replaceAll(RegExp(r&#39;[^0-9\.]&#39;), &quot;&quot;)
         : &quot;&quot;;
-    final isValidNum = amount.isNotEmpty &amp;&amp; int.tryParse(amount) != null;
-    if (isValidNum) {
-      final formattedText = AppTextFormatter.formatNumberLong(amount);
-      return TextEditingValue(
-        text: formattedText,
-        selection: TextSelection.collapsed(offset: formattedText.length),
-        composing: TextRange.empty,
-      );
-    } else {
-      return newValue;
+
+    if (amount.isEmpty) {
+      return newValue.copyWith(text: &quot;&quot;);
     }
+
+    &#47;&#47; Prevent multiple decimal points
+    final parts = amount.split(&#39;.&#39;);
+    if (parts.length &gt; 2) return oldValue;
+
+    final integerPart = parts[0];
+    final decimalPart = parts.length &gt; 1 ? parts[1] : null;
+
+    String formattedInteger = integerPart.isNotEmpty
+        ? AppTextFormatter.formatNumberLong(integerPart)
+        : (amount.startsWith(&#39;.&#39;) ? &quot;0&quot; : &quot;&quot;);
+
+    String formattedText = formattedInteger;
+    if (decimalPart != null) {
+      formattedText += &quot;.$decimalPart&quot;;
+    } else if (amount.endsWith(&#39;.&#39;)) {
+      formattedText += &quot;.&quot;;
+    }
+
+    return TextEditingValue(
+      text: formattedText,
+      selection: TextSelection.collapsed(offset: formattedText.length),
+      composing: TextRange.empty,
+    );
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t, error: e);
     return oldValue;

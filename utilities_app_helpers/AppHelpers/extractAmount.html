@@ -70,7 +70,7 @@
   <pre class="language-dart"><code class="language-dart">static num? extractAmount(String? amount) {
   if (!amount.hasValue) return null;
 
-  final pattern = RegExp(r&quot;(\$|£|€)&quot;);
+  final pattern = RegExp(r&quot;(\$|£|€|N)&quot;);
   final val = (amount!.startsWith(pattern) ? amount.substring(1) : amount)
       .trim();
   final number = num.tryParse(val.replaceAll(RegExp(r&#39;[^0-9\.]&#39;), &quot;&quot;).trim());

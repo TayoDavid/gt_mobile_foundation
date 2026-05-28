@@ -55,22 +55,44 @@
     <section class="multi-line-signature">
       
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../services_fs_data_responses_file_system_response/FsResponse-class.html">FsResponse</a></span>&gt;</span></span>
-<span class="name ">pickImage</span>(<wbr>)
+<span class="name ">pickImage</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="pickImage-param-imageQuality"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">imageQuality</span>, </span></li>
+</ol>})
 
       
 
     </section>
     
 <section class="desc markdown">
-  <p>Opens the device's native file picker configured specifically to select an image file.</p>
+  <p>Opens the device's native file picker configured specifically to select a single image file.</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">static Future&lt;FsResponse&gt; pickImage() async {
-  return await AppFilePlugin.pickFile(documentType: .image);
+  <pre class="language-dart"><code class="language-dart">static Future&lt;FsResponse&gt; pickImage({int? imageQuality}) async {
+  try {
+    final XFile? image = await _picker.pickImage(
+      source: ImageSource.gallery,
+      imageQuality: imageQuality,
+    );
+    if (image != null) {
+      return FsResponse(
+        file: File(image.path),
+        name: image.name,
+        type: FsDocumentType.image,
+      );
+    }
+    return const FsResponse(
+      type: FsDocumentType.image,
+      error: FsError(type: FsErrorType.empty),
+    );
+  } catch (e, t) {
+    return FsResponse(
+      type: FsDocumentType.image,
+      error: FsError(type: FsErrorType.unknown, error: e, stackTrace: t),
+    );
+  }
 }</code></pre>
 </section>
 

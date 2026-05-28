@@ -56,7 +56,7 @@
       
 <span class="returntype">dynamic</span>
 <span class="name ">identifyUser</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="identifyUser-param-id"><span>required</span> <span class="type-annotation">dynamic</span> <span class="parameter-name">id</span>, </span></li>
-<li><span class="parameter" id="identifyUser-param-email"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">email</span>, </span></li>
+<li><span class="parameter" id="identifyUser-param-accountNumber"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">accountNumber</span>, </span></li>
 <li><span class="parameter" id="identifyUser-param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span></li>
 </ol>})
 
@@ -65,14 +65,18 @@
     </section>
     
 <section class="desc markdown">
-  <p>Associates subsequent crash reports with a specific user <code>id</code>, <code>email</code>, and optional <code>name</code>.</p>
+  <p>Associates subsequent crash reports with a specific user <code>id</code>, <code>accountNumber</code>, and optional <code>name</code>.</p>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">identifyUser({required dynamic id, required String email, String? name});</code></pre>
+  <pre class="language-dart"><code class="language-dart">identifyUser({
+  required dynamic id,
+  required String accountNumber,
+  String? name,
+});</code></pre>
 </section>
 
 

@@ -55,8 +55,7 @@
     <section class="multi-line-signature">
       
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
-<span class="name ">getMaxSizeInMb</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="getMaxSizeInMb-param-mimeType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">mimeType</span>, </span></li>
-<li><span class="parameter" id="getMaxSizeInMb-param-isProUser"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isProUser</span></span></li>
+<span class="name ">getMaxSizeInMb</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="getMaxSizeInMb-param-mimeType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">mimeType</span></span></li>
 </ol>)
 
       
@@ -71,10 +70,9 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">static int getMaxSizeInMb(String mimeType, bool isProUser) {
+  <pre class="language-dart"><code class="language-dart">static int getMaxSizeInMb(String mimeType) {
   final mime = mimeType.lower;
   if (mime.startsWith(&quot;image&quot;)) return 5;
-  if (!isProUser) return 100;
   return 200;
 }</code></pre>
 </section>

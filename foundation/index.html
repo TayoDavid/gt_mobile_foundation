@@ -97,6 +97,22 @@
   The interface definition for application analytics tracking.
 </dd>
 
+          <dt id="AppAnalyticsServiceImpl">
+  <span class="name "><a href="../services_analytics_firebase_analytics_service/AppAnalyticsServiceImpl-class.html">AppAnalyticsServiceImpl</a></span> 
+
+</dt>
+<dd>
+  An implementation of <a href="../services_analytics_analytics_interface/AppAnalyticsService-class.html">AppAnalyticsService</a> that utilizes Firebase Analytics.
+</dd>
+
+          <dt id="AppAvData">
+  <span class="name "><a href="../data_models_media_data/AppAvData-class.html">AppAvData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Represents audio and video media data, including YouTube links.
+</dd>
+
           <dt id="AppCardDateFormatter">
   <span class="name "><a href="../utilities_app_text_formatter/AppCardDateFormatter-class.html">AppCardDateFormatter</a></span> 
 
@@ -153,6 +169,14 @@
   The interface definition for crash reporting and error tracking services.
 </dd>
 
+          <dt id="AppCrashlyticsServiceImpl">
+  <span class="name "><a href="../services_crashlytics_firebase_crashlytics_service/AppCrashlyticsServiceImpl-class.html">AppCrashlyticsServiceImpl</a></span> 
+
+</dt>
+<dd>
+  An implementation of <a href="../services_crashlytics_crashlytics_interface/AppCrashlyticsService-class.html">AppCrashlyticsService</a> that integrates with Firebase Crashlytics.
+</dd>
+
           <dt id="AppCryptoService">
   <span class="name "><a href="../services_crypto_crypto_service/AppCryptoService-class.html">AppCryptoService</a></span> 
 
@@ -198,7 +222,7 @@
 
 </dt>
 <dd>
-  
+  Represents standard document media data, such as PDFs, Word documents, or CSV files.
 </dd>
 
           <dt id="AppFcmMockService">
@@ -209,12 +233,28 @@
   A mock implementation of <a href="../services_push_notifications_app_push_notfication/AppPushNotificationService-class.html">AppPushNotificationService</a> for testing.
 </dd>
 
+          <dt id="AppFcmServiceImpl">
+  <span class="name "><a href="../services_push_notifications_fcm_service/AppFcmServiceImpl-class.html">AppFcmServiceImpl</a></span> 
+
+</dt>
+<dd>
+  An implementation of <a href="../services_push_notifications_app_push_notfication/AppPushNotificationService-class.html">AppPushNotificationService</a> using Firebase Cloud Messaging (FCM).
+</dd>
+
           <dt id="AppFilePlugin">
   <span class="name "><a href="../services_fs_app_file_plugin/AppFilePlugin-class.html">AppFilePlugin</a></span> 
 
 </dt>
 <dd>
   A plugin for handling file system operations such as picking and saving files.
+</dd>
+
+          <dt id="AppFirebaseConfigImpl">
+  <span class="name "><a href="../services_firebase_config_config/AppFirebaseConfigImpl-class.html">AppFirebaseConfigImpl</a></span> 
+
+</dt>
+<dd>
+  A configuration service that handles the initialization of Firebase services.
 </dd>
 
           <dt id="AppHelpers">
@@ -255,7 +295,7 @@ connection checking, file size calculation, and error extraction.
 
 </dt>
 <dd>
-  
+  Represents image media data.
 </dd>
 
           <dt id="AppImagePlugin">
@@ -263,7 +303,7 @@ connection checking, file size calculation, and error extraction.
 
 </dt>
 <dd>
-  A plugin specifically designed for picking image files from the file system.
+  A plugin specifically designed for picking and capturing image files from the device.
 </dd>
 
           <dt id="AppLogger">
@@ -272,6 +312,22 @@ connection checking, file size calculation, and error extraction.
 </dt>
 <dd>
   A simple logger wrapper that prints colored output only in debug mode.
+</dd>
+
+          <dt id="AppMediaData">
+  <span class="name "><a href="../data_models_media_data/AppMediaData-class.html">AppMediaData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Defines the structure of generic media data containing its type and metadata.
+</dd>
+
+          <dt id="AppMediaPlayer">
+  <span class="name "><a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a></span> 
+
+</dt>
+<dd>
+  Defines the unified strategy interface for all media players.
 </dd>
 
           <dt id="AppMimeTypes">
@@ -389,6 +445,14 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
   Base class representing the state of an asynchronous operation.
 </dd>
 
+          <dt id="AudioPlayerService">
+  <span class="name "><a href="../services_media_player_audio_player_service/AudioPlayerService-class.html">AudioPlayerService</a></span> 
+
+</dt>
+<dd>
+  An implementation of <a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a> that handles audio playback.
+</dd>
+
           <dt id="BiometricAuthService">
   <span class="name "><a href="../services_biometric_auth_biometric_auth_service/BiometricAuthService-class.html">BiometricAuthService</a></span> 
 
@@ -414,6 +478,14 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
   A mock implementation of <a href="../services_biometric_auth_biometric_auth_service/BiometricAuthService-class.html">BiometricAuthService</a> for testing environments.
 </dd>
 
+          <dt id="CaptionablePlayer">
+  <span class="name "><a href="../services_media_player_media_player_interface/CaptionablePlayer-class.html">CaptionablePlayer</a></span> 
+
+</dt>
+<dd>
+  An interface for media players that support closed captions.
+</dd>
+
           <dt id="ChangeModel">
   <span class="name "><a href="../data_models_change_model/ChangeModel-class.html">ChangeModel</a><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="../data_podos_identifiable/Identifiable-class.html">Identifiable</a></span>&gt;</span></span> 
 
@@ -431,7 +503,7 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="Codable">
-  <span class="name "><a href="../data_models_codable/Codable-class.html">Codable</a></span> 
+  <span class="name "><a href="../data_contracts_codable/Codable-class.html">Codable</a></span> 
 
 </dt>
 <dd>
@@ -460,6 +532,22 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dt>
 <dd>
   A model class representing a country and its metadata (e.g., dial code, ISO code, flags).
+</dd>
+
+          <dt id="DecryptInterceptor">
+  <span class="name "><a href="../services_networking_http_interceptors_crypto_interceptor/DecryptInterceptor-class.html">DecryptInterceptor</a></span> 
+
+</dt>
+<dd>
+  An interceptor that intercepts incoming responses and decrypts the body data using <a href="../services_crypto_crypto_service/AppCryptoService-class.html">AppCryptoService</a>.
+</dd>
+
+          <dt id="EncryptInterceptor">
+  <span class="name "><a href="../services_networking_http_interceptors_crypto_interceptor/EncryptInterceptor-class.html">EncryptInterceptor</a></span> 
+
+</dt>
+<dd>
+  An interceptor that intercepts outgoing requests and encrypts the body data using <a href="../services_crypto_crypto_service/AppCryptoService-class.html">AppCryptoService</a>.
 </dd>
 
           <dt id="FsError">
@@ -511,7 +599,7 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="ListCodable">
-  <span class="name "><a href="../data_models_codable/ListCodable-class.html">ListCodable</a></span> 
+  <span class="name "><a href="../data_contracts_codable/ListCodable-class.html">ListCodable</a></span> 
 
 </dt>
 <dd>
@@ -527,19 +615,27 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="MapCodable">
-  <span class="name "><a href="../data_models_codable/MapCodable-class.html">MapCodable</a></span> 
+  <span class="name "><a href="../data_contracts_codable/MapCodable-class.html">MapCodable</a></span> 
 
 </dt>
 <dd>
   
 </dd>
 
-          <dt id="MediaData">
-  <span class="name "><a href="../data_models_media_data/MediaData-class.html">MediaData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+          <dt id="MediaPlayerService">
+  <span class="name "><a href="../services_media_player_media_player_service/MediaPlayerService-class.html">MediaPlayerService</a></span> 
 
 </dt>
 <dd>
-  Defines the structure of generic media data containing its type and metadata.
+  A facade service that orchestrates various media players using the Strategy Pattern.
+</dd>
+
+          <dt id="MediaSource">
+  <span class="name "><a href="../services_media_player_data_models_media_source/MediaSource-class.html">MediaSource</a></span> 
+
+</dt>
+<dd>
+  
 </dd>
 
           <dt id="NetworkInterceptor">
@@ -567,7 +663,7 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="RootRouteRegistry">
-  <span class="name "><a href="../data_models_route_registry/RootRouteRegistry-class.html">RootRouteRegistry</a></span> 
+  <span class="name "><a href="../data_contracts_route_registry/RootRouteRegistry-class.html">RootRouteRegistry</a></span> 
 
 </dt>
 <dd>
@@ -575,7 +671,7 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="RouteRegistry">
-  <span class="name "><a href="../data_models_route_registry/RouteRegistry-class.html">RouteRegistry</a></span> 
+  <span class="name "><a href="../data_contracts_route_registry/RouteRegistry-class.html">RouteRegistry</a></span> 
 
 </dt>
 <dd>
@@ -646,6 +742,22 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
   Base interface for defining callable use cases within the application layer.
 </dd>
 
+          <dt id="VideoPlayerService">
+  <span class="name "><a href="../services_media_player_video_player_service/VideoPlayerService-class.html">VideoPlayerService</a></span> 
+
+</dt>
+<dd>
+  An implementation of <a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a> and <a href="../services_media_player_media_player_interface/CaptionablePlayer-class.html">CaptionablePlayer</a> that handles video playback.
+</dd>
+
+          <dt id="YoutubePlayerService">
+  <span class="name "><a href="../services_media_player_youtube_player_service/YoutubePlayerService-class.html">YoutubePlayerService</a></span> 
+
+</dt>
+<dd>
+  An implementation of <a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a> that handles YouTube video playback.
+</dd>
+
       </dl>
     </section>
 
@@ -666,6 +778,22 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dt>
 <dd>
   Defines the specific events tracked by the application's analytics engine.
+</dd>
+
+          <dt id="AppMediaOrigin">
+  <span class="name "><a href="../data_enums_media_enums/AppMediaOrigin.html">AppMediaOrigin</a></span> 
+
+</dt>
+<dd>
+  Defines the origin or source location of a media file.
+</dd>
+
+          <dt id="AppMediaType">
+  <span class="name "><a href="../data_enums_media_enums/AppMediaType.html">AppMediaType</a></span> 
+
+</dt>
+<dd>
+  Represents the specific type or format of a media file.
 </dd>
 
           <dt id="AppPermissions">
@@ -692,20 +820,20 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
   Defines errors that can occur during file system operations.
 </dd>
 
-          <dt id="MediaOrigin">
-  <span class="name "><a href="../data_enums_media_enums/MediaOrigin.html">MediaOrigin</a></span> 
+          <dt id="ImageCameraOption">
+  <span class="name "><a href="../services_fs_app_image_plugin/ImageCameraOption.html">ImageCameraOption</a></span> 
 
 </dt>
 <dd>
-  Specifies the origin of a media asset.
+  Represents the camera source option for capturing an image.
 </dd>
 
-          <dt id="MediaType">
-  <span class="name "><a href="../data_enums_media_enums/MediaType.html">MediaType</a></span> 
+          <dt id="MediaPlayerState">
+  <span class="name "><a href="../services_media_player_data_enums_media_enums/MediaPlayerState.html">MediaPlayerState</a></span> 
 
 </dt>
 <dd>
-  Specifies the type of media.
+  
 </dd>
 
       </dl>
@@ -742,7 +870,7 @@ crash reporting for unexpected errors.
 </dd>
 
           <dt id="RootRouteRegistryMixin">
-  <span class="name "><a href="../data_models_route_registry/RootRouteRegistryMixin-mixin.html">RootRouteRegistryMixin</a></span> 
+  <span class="name "><a href="../data_contracts_route_registry/RootRouteRegistryMixin-mixin.html">RootRouteRegistryMixin</a></span> 
 
 </dt>
 <dd>
@@ -856,6 +984,16 @@ determine success or failure states.
 </dt>
 <dd>
   Extensions on nullable <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a> for safer data manipulation.
+</dd>
+
+          <dt id="MediaExtensions">
+  <span class="name "><a href="../services_media_player_utilities_media_extensions/MediaExtensions.html">MediaExtensions</a></span>
+  on <a href="../data_models_media_data/AppAvData-class.html">AppAvData</a>
+  
+
+</dt>
+<dd>
+  
 </dd>
 
           <dt id="NonNullListExtension">
@@ -1120,6 +1258,21 @@ the main configuration and localized strings.
     
 
   </dd>
+
+          
+  <dt id="MediaPlayStreamData" class="">
+  <span class="name"><a href="../services_media_player_data_typedefs_media_types/MediaPlayStreamData.html">MediaPlayStreamData</a></span>
+    = (<span class="field">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a></span> <span class="field-name">duration</span>, </span><span class="field"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="field-name">paused</span>, </span><span class="field"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="field-name">playbackSpeed</span>, </span><span class="field"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a></span> <span class="field-name">position</span>, </span><span class="field"><span class="type-annotation"><a href="../services_media_player_data_enums_media_enums/MediaPlayerState.html">MediaPlayerState</a></span> <span class="field-name">state</span>, </span><span class="field"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="field-name">volume</span>}</span>)
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
 
           
   <dt id="OnBoolValidation" class="callable">
@@ -1389,6 +1542,10 @@ Useful for tracking asynchronous operations and their loading/error states.
       <li><a href="../data_constants_mime_types/">data/constants/mime_types</a></li>
       <li><a href="../data_constants_regex/">data/constants/regex</a></li>
       <li><a href="../data_constants_strings/">data/constants/strings</a></li>
+      <li><a href="../data_contracts_codable/">data/contracts/codable</a></li>
+      <li><a href="../data_contracts_contracts/">data/contracts/contracts</a></li>
+      <li><a href="../data_contracts_form_mixin/">data/contracts/form_mixin</a></li>
+      <li><a href="../data_contracts_route_registry/">data/contracts/route_registry</a></li>
       <li><a href="../data_data/">data/data</a></li>
       <li><a href="../data_enums_crypto_enums/">data/enums/crypto_enums</a></li>
       <li><a href="../data_enums_enums/">data/enums/enums</a></li>
@@ -1398,12 +1555,10 @@ Useful for tracking asynchronous operations and their loading/error states.
       <li><a href="../data_enums_permissions_enums/">data/enums/permissions_enums</a></li>
       <li><a href="../data_models_app_http_model/">data/models/app_http_model</a></li>
       <li><a href="../data_models_change_model/">data/models/change_model</a></li>
-      <li><a href="../data_models_codable/">data/models/codable</a></li>
       <li><a href="../data_models_future_data/">data/models/future_data</a></li>
       <li><a href="../data_models_media_data/">data/models/media_data</a></li>
       <li><a href="../data_models_models/">data/models/models</a></li>
       <li><a href="../data_models_network_response/">data/models/network_response</a></li>
-      <li><a href="../data_models_route_registry/">data/models/route_registry</a></li>
       <li><a href="../data_models_session_data/">data/models/session_data</a></li>
       <li><a href="../data_models_state_model/">data/models/state_model</a></li>
       <li><a href="../data_models_usecase_model/">data/models/usecase_model</a></li>
@@ -1432,6 +1587,7 @@ Useful for tracking asynchronous operations and their loading/error states.
       <li><a href="../services_analytics_analytics/">services/analytics/analytics</a></li>
       <li><a href="../services_analytics_analytics_interface/">services/analytics/analytics_interface</a></li>
       <li><a href="../services_analytics_analytics_mock/">services/analytics/analytics_mock</a></li>
+      <li><a href="../services_analytics_firebase_analytics_service/">services/analytics/firebase_analytics_service</a></li>
       <li><a href="../services_biometric_auth_biometric_auth/">services/biometric_auth/biometric_auth</a></li>
       <li><a href="../services_biometric_auth_biometric_auth_service/">services/biometric_auth/biometric_auth_service</a></li>
       <li><a href="../services_biometric_auth_biometric_auth_service_impl/">services/biometric_auth/biometric_auth_service_impl</a></li>
@@ -1439,16 +1595,34 @@ Useful for tracking asynchronous operations and their loading/error states.
       <li><a href="../services_crashlytics_crashlytics/">services/crashlytics/crashlytics</a></li>
       <li><a href="../services_crashlytics_crashlytics_interface/">services/crashlytics/crashlytics_interface</a></li>
       <li><a href="../services_crashlytics_crashlytics_mock/">services/crashlytics/crashlytics_mock</a></li>
+      <li><a href="../services_crashlytics_firebase_crashlytics_service/">services/crashlytics/firebase_crashlytics_service</a></li>
       <li><a href="../services_crypto_crypto/">services/crypto/crypto</a></li>
       <li><a href="../services_crypto_crypto_service/">services/crypto/crypto_service</a></li>
       <li><a href="../services_crypto_crypto_service_impl/">services/crypto/crypto_service_impl</a></li>
       <li><a href="../services_crypto_crypto_service_mock/">services/crypto/crypto_service_mock</a></li>
+      <li><a href="../services_firebase_config_config/">services/firebase_config/config</a></li>
+      <li><a href="../services_firebase_config_firebase_config/">services/firebase_config/firebase_config</a></li>
       <li><a href="../services_fs_app_file_plugin/">services/fs/app_file_plugin</a></li>
       <li><a href="../services_fs_app_image_plugin/">services/fs/app_image_plugin</a></li>
       <li><a href="../services_fs_data_data/">services/fs/data/data</a></li>
       <li><a href="../services_fs_data_responses_file_system_response/">services/fs/data/responses/file_system_response</a></li>
       <li><a href="../services_fs_data_responses_responses/">services/fs/data/responses/responses</a></li>
       <li><a href="../services_fs_fs/">services/fs/fs</a></li>
+      <li><a href="../services_media_player_audio_player_service/">services/media_player/audio_player_service</a></li>
+      <li><a href="../services_media_player_data_data/">services/media_player/data/data</a></li>
+      <li><a href="../services_media_player_data_enums_enums/">services/media_player/data/enums/enums</a></li>
+      <li><a href="../services_media_player_data_enums_media_enums/">services/media_player/data/enums/media_enums</a></li>
+      <li><a href="../services_media_player_data_models_media_source/">services/media_player/data/models/media_source</a></li>
+      <li><a href="../services_media_player_data_models_models/">services/media_player/data/models/models</a></li>
+      <li><a href="../services_media_player_data_typedefs_media_types/">services/media_player/data/typedefs/media_types</a></li>
+      <li><a href="../services_media_player_data_typedefs_typedefs/">services/media_player/data/typedefs/typedefs</a></li>
+      <li><a href="../services_media_player_media_player/">services/media_player/media_player</a></li>
+      <li><a href="../services_media_player_media_player_interface/">services/media_player/media_player_interface</a></li>
+      <li><a href="../services_media_player_media_player_service/">services/media_player/media_player_service</a></li>
+      <li><a href="../services_media_player_utilities_media_extensions/">services/media_player/utilities/media_extensions</a></li>
+      <li><a href="../services_media_player_utilities_utilities/">services/media_player/utilities/utilities</a></li>
+      <li><a href="../services_media_player_video_player_service/">services/media_player/video_player_service</a></li>
+      <li><a href="../services_media_player_youtube_player_service/">services/media_player/youtube_player_service</a></li>
       <li><a href="../services_networking_http_app_http_service/">services/networking/http/app_http_service</a></li>
       <li><a href="../services_networking_http_http/">services/networking/http/http</a></li>
       <li><a href="../services_networking_http_interceptors_content_type_interceptor/">services/networking/http/interceptors/content_type_interceptor</a></li>
@@ -1464,6 +1638,7 @@ Useful for tracking asynchronous operations and their loading/error states.
       <li><a href="../services_permission_permission_service_mock/">services/permission/permission_service_mock</a></li>
       <li><a href="../services_push_notifications_app_push_notfication/">services/push_notifications/app_push_notfication</a></li>
       <li><a href="../services_push_notifications_app_push_notification_mock/">services/push_notifications/app_push_notification_mock</a></li>
+      <li><a href="../services_push_notifications_fcm_service/">services/push_notifications/fcm_service</a></li>
       <li><a href="../services_push_notifications_push_notifications/">services/push_notifications/push_notifications</a></li>
       <li><a href="../services_screen_shot_screen_shot/">services/screen_shot/screen_shot</a></li>
       <li><a href="../services_screen_shot_screen_shot_service/">services/screen_shot/screen_shot_service</a></li>

@@ -53,6 +53,13 @@
 </h1></div>
 
     
+<section class="desc markdown">
+  <p>Represents image media data.</p>
+<p>This model supports a wide variety of image sources including network URLs,
+local assets, file system images, raw bytes, and Flutter <a href="https://api.flutter.dev/flutter/widgets/IconData-class.html">IconData</a>.
+It provides utility getters to seamlessly convert the raw data into Flutter
+image providers (e.g., <a href="https://api.flutter.dev/flutter/painting/NetworkImage-class.html">NetworkImage</a>, <a href="https://api.flutter.dev/flutter/painting/FileImage-class.html">FileImage</a>, <a href="https://api.flutter.dev/flutter/painting/AssetImage-class.html">AssetImage</a>, <a href="https://api.flutter.dev/flutter/painting/MemoryImage-class.html">MemoryImage</a>).</p>
+</section>
 
 
     <section>
@@ -71,7 +78,7 @@
   <dt>Implemented types</dt>
   <dd>
     <ul class="comma-separated clazz-relationships">
-        <li><a href="../data_models_media_data/MediaData-class.html">MediaData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></li>
+        <li><a href="../data_models_media_data/AppMediaData-class.html">AppMediaData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></li>
     </ul>
   </dd>
         
@@ -193,7 +200,7 @@
 
 </dt>
 <dd>
-  
+  Returns the <a href="https://api.flutter.dev/flutter/dart-io/File-class.html">File</a> object if <a href="../data_models_media_data/AppImageData/isFile.html">isFile</a> is true, otherwise <code>null</code>.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -217,7 +224,7 @@
 
 </dt>
 <dd>
-  
+  Returns the name of the file, parsing it from the path or URL if not explicitly set.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -229,7 +236,7 @@
 
 </dt>
 <dd>
-  
+  Returns the local file path or asset path if applicable, otherwise <code>null</code>.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -241,7 +248,7 @@
 
 </dt>
 <dd>
-  
+  Returns the file URL if <a href="../data_models_media_data/AppImageData/isUrl.html">isUrl</a> is true, otherwise <code>null</code>.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -265,7 +272,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media has a unique identifier.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -277,7 +284,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media has an assigned name.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -337,7 +344,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the underlying data is a local file.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -373,7 +380,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the underlying data is a string (e.g., URL or asset path).
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -385,7 +392,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media is hosted on a remote URL.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -397,7 +404,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media data is valid and accessible.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -409,7 +416,7 @@
 
 </dt>
 <dd>
-  
+  Returns the MIME type (e.g., 'video/mp4', 'image/png') of the media data.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>

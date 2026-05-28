@@ -72,7 +72,7 @@
   <pre class="language-dart"><code class="language-dart">Future&lt;String?&gt; getClipboardText() async {
   try {
     final data = await Clipboard.getData(Clipboard.kTextPlain);
-    showSnackBar(&quot;coppiedFromClipboard&quot;.tr({&quot;value&quot;: data?.text ?? &quot;&quot;}));
+    showSnackBar(&quot;copiedFromClipboard&quot;.tr({&quot;value&quot;: data?.text ?? &quot;&quot;}));
     return data?.text;
   } catch (e) {
     return null;

@@ -53,6 +53,11 @@
 </h1></div>
 
     
+<section class="desc markdown">
+  <p>Represents standard document media data, such as PDFs, Word documents, or CSV files.</p>
+<p>This model encapsulates the document payload, which can be accessed from a network URL,
+a local <a href="https://api.flutter.dev/flutter/dart-io/File-class.html">File</a>, or raw bytes, and provides utility methods for resolving its MIME type.</p>
+</section>
 
 
     <section>
@@ -71,7 +76,7 @@
   <dt>Implemented types</dt>
   <dd>
     <ul class="comma-separated clazz-relationships">
-        <li><a href="../data_models_media_data/MediaData-class.html">MediaData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></li>
+        <li><a href="../data_models_media_data/AppMediaData-class.html">AppMediaData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></li>
     </ul>
   </dd>
         
@@ -89,7 +94,7 @@
     <h2>Constructors</h2>
     <dl class="constructor-summary-list">
         <dt id="AppDocumentData.new" class="callable">
-          <span class="name"><a href="../data_models_media_data/AppDocumentData/AppDocumentData.html">AppDocumentData</a></span><span class="signature">(<span class="parameter" id="param-document"><span class="type-annotation">T</span> <span class="parameter-name">document</span>, {</span><span class="parameter" id="param-contentType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">contentType</span>, </span><span class="parameter" id="param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="param-createdAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">createdAt</span>, </span><span class="parameter" id="param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">id</span>, </span><span class="parameter" id="param-mediaType"><span class="type-annotation"><a href="../data_enums_media_enums/MediaType.html">MediaType</a>?</span> <span class="parameter-name">mediaType</span></span>})</span>
+          <span class="name"><a href="../data_models_media_data/AppDocumentData/AppDocumentData.html">AppDocumentData</a></span><span class="signature">(<span class="parameter" id="param-document"><span class="type-annotation">T</span> <span class="parameter-name">document</span>, {</span><span class="parameter" id="param-contentType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">contentType</span>, </span><span class="parameter" id="param-name"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="param-createdAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">createdAt</span>, </span><span class="parameter" id="param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">id</span>, </span><span class="parameter" id="param-mediaType"><span class="type-annotation"><a href="../data_enums_media_enums/AppMediaType.html">AppMediaType</a>?</span> <span class="parameter-name">mediaType</span></span>})</span>
         </dt>
         <dd>
           
@@ -146,7 +151,7 @@
 
 </dt>
 <dd>
-  
+  Returns the <a href="https://api.flutter.dev/flutter/dart-io/File-class.html">File</a> object if <a href="../data_models_media_data/AppDocumentData/isFile.html">isFile</a> is true, otherwise <code>null</code>.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -158,7 +163,7 @@
 
 </dt>
 <dd>
-  
+  Returns the name of the file, parsing it from the path or URL if not explicitly set.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -170,7 +175,7 @@
 
 </dt>
 <dd>
-  
+  Returns the local file path or asset path if applicable, otherwise <code>null</code>.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -182,7 +187,7 @@
 
 </dt>
 <dd>
-  
+  Returns the file URL if <a href="../data_models_media_data/AppDocumentData/isUrl.html">isUrl</a> is true, otherwise <code>null</code>.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -206,7 +211,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media has a unique identifier.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -218,7 +223,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media has an assigned name.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -242,7 +247,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the underlying data is a local file.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -254,7 +259,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the underlying data is a string (e.g., URL or asset path).
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -266,7 +271,7 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media is hosted on a remote URL.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
@@ -278,14 +283,14 @@
 
 </dt>
 <dd>
-  
+  Returns <code>true</code> if the media data is valid and accessible.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
 
         <dt id="mediaOrigin" class="property">
   <span class="name"><a href="../data_models_media_data/AppDocumentData/mediaOrigin.html">mediaOrigin</a></span>
-  <span class="signature">&#8594; <a href="../data_enums_media_enums/MediaOrigin.html">MediaOrigin</a></span>
+  <span class="signature">&#8594; <a href="../data_enums_media_enums/AppMediaOrigin.html">AppMediaOrigin</a></span>
   
 
 </dt>
@@ -297,7 +302,7 @@
 
         <dt id="mediaType" class="property">
   <span class="name"><a href="../data_models_media_data/AppDocumentData/mediaType.html">mediaType</a></span>
-  <span class="signature">&#8594; <a href="../data_enums_media_enums/MediaType.html">MediaType</a>?</span>
+  <span class="signature">&#8594; <a href="../data_enums_media_enums/AppMediaType.html">AppMediaType</a>?</span>
   
 
 </dt>
@@ -314,7 +319,7 @@
 
 </dt>
 <dd>
-  
+  Returns the MIME type (e.g., 'video/mp4', 'image/png') of the media data.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>

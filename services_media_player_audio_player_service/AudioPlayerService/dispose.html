@@ -78,7 +78,6 @@
 Future&lt;void&gt; dispose() async {
   try {
     await unloadSource();
-    await _player.dispose();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

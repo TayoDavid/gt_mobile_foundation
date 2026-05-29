@@ -71,15 +71,9 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; unloadSource(MediaSource source) async {
-  final id = source.id;
-  if (id != null &amp;&amp; _sourceCache.containsKey(id)) {
-    _sourceCache.remove(id);
-  }
-  if (_currentSource?.id == id) {
-    await _activePlayer?.unloadSource();
-    _activePlayer = null;
-    _currentSource = null;
-  }
+  await _activePlayer?.unloadSource();
+  _activePlayer = null;
+  _currentSource = null;
 }</code></pre>
 </section>
 

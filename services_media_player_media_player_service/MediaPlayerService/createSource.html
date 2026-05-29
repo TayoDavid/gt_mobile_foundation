@@ -76,12 +76,10 @@ Returns the initialized <a href="../../services_media_player_data_models_media_s
   AppAvData data, {
   bool autoPlay = true,
 }) async {
-  _currentSource = null;
   final source = _retrieveSource(data);
   if (source == null || !source.isValidSource) return null;
-  _currentSource = source;
-  await _loadSource(_currentSource, autoPlay);
-  return _currentSource;
+  await _loadSource(source, autoPlay);
+  return source;
 }</code></pre>
 </section>
 

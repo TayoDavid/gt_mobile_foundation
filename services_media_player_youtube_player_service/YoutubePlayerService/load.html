@@ -61,7 +61,6 @@
   </div>
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
 <span class="name ">load</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="load-param-autoPlay"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoPlay</span> = <span class="default-value">true</span>, </span></li>
-<li><span class="parameter" id="load-param-loop"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">loop</span> = <span class="default-value">false</span>, </span></li>
 </ol>})
 
       <div class="features"><span class="feature">override</span></div>
@@ -77,7 +76,7 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-Future&lt;void&gt; load({bool autoPlay = true, bool loop = false}) async {
+Future&lt;void&gt; load({bool autoPlay = true}) async {
   try {
     await unloadSource();
     _controller.addListener(_onControllerUpdate);

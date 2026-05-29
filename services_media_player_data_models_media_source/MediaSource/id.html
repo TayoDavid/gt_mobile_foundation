@@ -59,7 +59,7 @@
   <section id="getter">
     <section class="multi-line-signature">
       
-      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
       get
       <span class="name ">id</span>
       
@@ -70,7 +70,7 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">String? get id =&gt; media.id;</code></pre>
+  <pre class="language-dart"><code class="language-dart">String get id =&gt; &quot;${media.id ?? media.hashCode}&quot;;</code></pre>
 </section>
 
   </section>

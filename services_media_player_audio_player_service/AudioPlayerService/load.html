@@ -80,7 +80,7 @@
 Future&lt;void&gt; load({bool autoPlay = true, bool loop = false}) async {
   try {
     await pause();
-    await _loadSound(autoPlay: autoPlay, loop: loop);
+    await _loadSound(autoPlay: autoPlay);
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

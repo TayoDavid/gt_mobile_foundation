@@ -76,11 +76,8 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; unloadSource() async {
-  if (_controller != null) {
-    await reset();
-    _controller!.removeListener(_onControllerUpdate);
-    _controller = null;
-  }
+  await reset();
+  _controller.removeListener(_onControllerUpdate);
 }</code></pre>
 </section>
 

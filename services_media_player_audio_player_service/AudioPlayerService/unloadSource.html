@@ -78,8 +78,7 @@
 Future&lt;void&gt; unloadSource() async {
   try {
     await stop();
-    &#47;&#47; wait, `_player.clearAudioSources()` doesn&#39;t exist? Actually let&#39;s just stop or set a blank source.
-    &#47;&#47; We removed `_player.clearAudioSources();` because it causes issues if not an extension.
+    _player.removeAudioSourceAt(0);
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

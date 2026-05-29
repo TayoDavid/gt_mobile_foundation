@@ -81,7 +81,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 Duration? get duration {
   try {
-    return _controller?.value.duration;
+    return _controller.value.duration;
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
     return null;

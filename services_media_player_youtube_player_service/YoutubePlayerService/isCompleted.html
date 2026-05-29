@@ -81,7 +81,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 bool get isCompleted {
   try {
-    return _controller?.value.playerState == PlayerState.ended;
+    return _controller.value.playerState == PlayerState.ended;
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, error: e, stackTrace: t);
     return false;

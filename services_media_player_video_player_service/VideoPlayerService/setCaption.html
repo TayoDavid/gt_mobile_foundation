@@ -78,7 +78,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; setCaption(SubRipCaptionFile caption) async {
   try {
-    await _controller?.setClosedCaptionFile(Future.value(caption));
+    await _controller.setClosedCaptionFile(Future.value(caption));
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

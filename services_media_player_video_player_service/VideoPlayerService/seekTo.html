@@ -78,7 +78,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; seekTo(Duration duration) async {
   try {
-    await _controller?.seekTo(duration);
+    await _controller.seekTo(duration);
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

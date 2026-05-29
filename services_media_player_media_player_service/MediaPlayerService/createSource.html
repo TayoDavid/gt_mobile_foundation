@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the getSource method from the MediaPlayerService class, for the Dart programming language.">
-  <title>getSource method - MediaPlayerService class - media_player_service library - Dart API</title>
+  <meta name="description" content="API docs for the createSource method from the MediaPlayerService class, for the Dart programming language.">
+  <title>createSource method - MediaPlayerService class - media_player_service library - Dart API</title>
 
 
   
@@ -27,9 +27,9 @@
     <li><a href="../../index.html">gt_mobile_foundation</a></li>
     <li><a href="../../services_media_player_media_player_service/">services&#47;media_player&#47;media_player_service.dart</a></li>
     <li><a href="../../services_media_player_media_player_service/MediaPlayerService-class.html">MediaPlayerService</a></li>
-    <li class="self-crumb">getSource method</li>
+    <li class="self-crumb">createSource method</li>
   </ol>
-  <div class="self-name">getSource</div>
+  <div class="self-name">createSource</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -49,14 +49,15 @@
     data-above-sidebar="services_media_player_media_player_service&#47;MediaPlayerService-class-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-method">getSource</span> method 
+<h1><span class="kind-method">createSource</span> method 
 </h1></div>
 
     <section class="multi-line-signature">
       
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../services_media_player_data_models_media_source/MediaSource-class.html">MediaSource</a>?</span>&gt;</span></span>
-<span class="name ">getSource</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="getSource-param-data"><span class="type-annotation"><a href="../../data_models_media_data/AppAvData-class.html">AppAvData</a></span> <span class="parameter-name">data</span></span></li>
-</ol>)
+<span class="name ">createSource</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="createSource-param-data"><span class="type-annotation"><a href="../../data_models_media_data/AppAvData-class.html">AppAvData</a></span> <span class="parameter-name">data</span>, {</span></li>
+<li><span class="parameter" id="createSource-param-autoPlay"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoPlay</span> = <span class="default-value">true</span>, </span></li>
+</ol>})
 
       
 
@@ -71,12 +72,15 @@ Returns the initialized <a href="../../services_media_player_data_models_media_s
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Future&lt;MediaSource?&gt; getSource(AppAvData data) async {
+  <pre class="language-dart"><code class="language-dart">Future&lt;MediaSource?&gt; createSource(
+  AppAvData data, {
+  bool autoPlay = true,
+}) async {
   _currentSource = null;
   final source = _retrieveSource(data);
   if (source == null || !source.isValidSource) return null;
   _currentSource = source;
-  await _loadSource(_currentSource);
+  await _loadSource(_currentSource, autoPlay);
   return _currentSource;
 }</code></pre>
 </section>
@@ -94,7 +98,7 @@ Returns the initialized <a href="../../services_media_player_data_models_media_s
     <li><a href="../../index.html">gt_mobile_foundation</a></li>
     <li><a href="../../services_media_player_media_player_service/">media_player_service</a></li>
     <li><a href="../../services_media_player_media_player_service/MediaPlayerService-class.html">MediaPlayerService</a></li>
-    <li class="self-crumb">getSource method</li>
+    <li class="self-crumb">createSource method</li>
 </ol>
 
     <h5>MediaPlayerService class</h5>

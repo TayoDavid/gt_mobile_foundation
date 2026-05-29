@@ -80,23 +80,13 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 MediaPlayStreamData get playData {
-  if (_controller == null) {
-    return (
-      duration: 1.seconds,
-      paused: true,
-      position: 0.seconds,
-      playbackSpeed: 1,
-      state: MediaPlayerState.idle,
-      volume: 1,
-    );
-  }
   return (
     duration: duration ?? 1.seconds,
     paused: !isPlaying,
     position: position ?? 0.seconds,
-    playbackSpeed: _controller!.value.playbackRate,
-    state: MediaPlayerState.fromYoutubeValue(_controller!.value.playerState),
-    volume: (_controller!.value.volume).toDouble(),
+    playbackSpeed: _controller.value.playbackRate,
+    state: MediaPlayerState.fromYoutubeValue(_controller.value.playerState),
+    volume: (_controller.value.volume).toDouble(),
   );
 }</code></pre>
 </section>

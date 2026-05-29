@@ -198,6 +198,20 @@ playback commands to it.</p>
       id="instance-methods">
     <h2>Methods</h2>
     <dl class="callables">
+        <dt id="createSource" class="callable">
+  <span class="name"><a href="../services_media_player_media_player_service/MediaPlayerService/createSource.html">createSource</a></span><span class="signature">(<wbr><span class="parameter" id="createSource-param-data"><span class="type-annotation"><a href="../data_models_media_data/AppAvData-class.html">AppAvData</a></span> <span class="parameter-name">data</span>, {</span><span class="parameter" id="createSource-param-autoPlay"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoPlay</span> = <span class="default-value">true</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_media_player_data_models_media_source/MediaSource-class.html">MediaSource</a>?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Retrieves and loads a media source for the provided <a href="../data_models_media_data/AppAvData-class.html">AppAvData</a>.
+Returns the initialized <a href="../services_media_player_data_models_media_source/MediaSource-class.html">MediaSource</a> if successful, or <code>null</code> otherwise.
+  
+
+</dd>
+
         <dt id="dispose" class="callable">
   <span class="name"><a href="../services_media_player_media_player_service/MediaPlayerService/dispose.html">dispose</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
@@ -207,20 +221,6 @@ playback commands to it.</p>
 </dt>
 <dd>
   Disposes of the active player and clears the source cache.
-  
-
-</dd>
-
-        <dt id="getSource" class="callable">
-  <span class="name"><a href="../services_media_player_media_player_service/MediaPlayerService/getSource.html">getSource</a></span><span class="signature">(<wbr><span class="parameter" id="getSource-param-data"><span class="type-annotation"><a href="../data_models_media_data/AppAvData-class.html">AppAvData</a></span> <span class="parameter-name">data</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_media_player_data_models_media_source/MediaSource-class.html">MediaSource</a>?</span>&gt;</span></span>
-  </span>
-  
-
-</dt>
-<dd>
-  Retrieves and loads a media source for the provided <a href="../data_models_media_data/AppAvData-class.html">AppAvData</a>.
-Returns the initialized <a href="../services_media_player_data_models_media_source/MediaSource-class.html">MediaSource</a> if successful, or <code>null</code> otherwise.
   
 
 </dd>

@@ -81,7 +81,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 bool get isPlaying {
   try {
-    return _controller?.value.isPlaying ?? false;
+    return _controller.value.isPlaying;
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, error: e, stackTrace: t);
     return false;

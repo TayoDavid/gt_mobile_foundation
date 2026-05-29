@@ -78,7 +78,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; setSpeed(double speed) async {
   try {
-    await _controller?.setPlaybackSpeed(speed);
+    await _controller.setPlaybackSpeed(speed);
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

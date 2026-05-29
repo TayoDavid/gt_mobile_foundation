@@ -78,7 +78,7 @@
 Future&lt;void&gt; reset() async {
   try {
     await pause();
-    _controller?.reset();
+    _controller.reset();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

@@ -77,8 +77,8 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; play() async {
   try {
-    if (_controller == null || _controller!.value.isPlaying) return;
-    await _controller!.play();
+    if (_controller.value.isPlaying) return;
+    await _controller.play();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

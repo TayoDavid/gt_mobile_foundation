@@ -77,9 +77,8 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; toggleMute() async {
   try {
-    if (_controller == null) return;
-    final volume = _controller!.value.volume;
-    await _controller!.setVolume(volume &gt; 0 ? 0 : 1);
+    final volume = _controller.value.volume;
+    await _controller.setVolume(volume &gt; 0 ? 0 : 1);
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

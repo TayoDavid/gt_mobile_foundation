@@ -77,8 +77,8 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; pause() async {
   try {
-    if (_controller == null || !_controller!.value.isPlaying) return;
-    _controller!.pause();
+    if (!_controller.value.isPlaying) return;
+    _controller.pause();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

@@ -77,12 +77,12 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; togglePlay() async {
   try {
-    final playing = _controller?.value.isPlaying ?? false;
+    final playing = _controller.value.isPlaying;
     if (playing) {
       await pause();
-    } else {
-      await play();
+      return;
     }
+    await play();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

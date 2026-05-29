@@ -85,7 +85,6 @@ Future&lt;void&gt; load({bool autoPlay = true}) async {
     final isInitialised = _controller.value.isInitialized;
     if (!isInitialised) await _controller.initialize();
     if (autoPlay) await play();
-    _onControllerUpdate();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, error: e, stackTrace: t);
   }

@@ -78,6 +78,7 @@
 Future&lt;void&gt; dispose() async {
   try {
     await unloadSource();
+    _stateStreamController.close();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

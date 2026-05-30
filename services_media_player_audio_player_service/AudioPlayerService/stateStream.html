@@ -79,57 +79,7 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-Stream&lt;MediaPlayStreamData&gt; get stateStream async* {
-  final positionStream = _player.positionStream
-      .asBroadcastStream()
-      .handleError((e) =&gt; AppLogger.severe(&quot;$e&quot;, error: e));
-
-  final eventStream = _player.playbackEventStream
-      .asBroadcastStream()
-      .handleError((e) =&gt; AppLogger.severe(&quot;$e&quot;, error: e));
-
-  final durationStream = _player.durationStream
-      .asBroadcastStream()
-      .handleError((e) =&gt; AppLogger.severe(&quot;$e&quot;, error: e));
-
-  final playerStream = _player.playerEventStream
-      .asBroadcastStream()
-      .handleError((e) =&gt; AppLogger.severe(&quot;$e&quot;, error: e));
-
-  final stateStream = _player.playerStateStream
-      .asBroadcastStream()
-      .handleError((e) =&gt; AppLogger.severe(&quot;$e&quot;, error: e));
-
-  final speedStream = _player.speedStream.asBroadcastStream().handleError(
-    (e) =&gt; AppLogger.severe(&quot;$e&quot;, error: e),
-  );
-
-  final volumeStream = _player.volumeStream.asBroadcastStream().handleError(
-    (e) =&gt; AppLogger.severe(&quot;$e&quot;, error: e),
-  );
-
-  final streams = StreamGroup.merge([
-    positionStream,
-    eventStream,
-    durationStream,
-    speedStream,
-    stateStream,
-    volumeStream,
-    playerStream,
-  ]);
-
-  await for (final _ in streams) {
-    final inDoneState = _player.processingState == ProcessingState.completed;
-    yield (
-      duration: _player.duration ?? 0.seconds,
-      paused: !_player.playing || inDoneState,
-      position: _player.position,
-      playbackSpeed: _player.speed,
-      state: MediaPlayerState.from(_player.processingState),
-      volume: _player.volume,
-    );
-  }
-}</code></pre>
+Stream&lt;MediaPlayStreamData&gt; get stateStream =&gt; _stateStreamController.stream;</code></pre>
 </section>
 
   </section>

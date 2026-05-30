@@ -78,8 +78,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; load({bool autoPlay = true}) async {
   try {
-    await unloadSource();
-    _controller.addListener(_onControllerUpdate);
+    pause();
     _controller.load(_controller.initialVideoId);
     if (autoPlay) await play();
   } catch (e, t) {

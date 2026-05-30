@@ -54,8 +54,9 @@
 
     <section class="multi-line-signature">
       
-      <span class="name ">AudioPlayerService</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="param-_audioSource"><span class="type-annotation"><a href="https://pub.dev/documentation/just_audio/0.10.5/just_audio/AudioSource-class.html">AudioSource</a></span> <span class="parameter-name">_audioSource</span></span></li>
-</ol>)
+      <span class="name ">AudioPlayerService</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="param-_audioSource"><span class="type-annotation"><a href="https://pub.dev/documentation/just_audio/0.10.5/just_audio/AudioSource-class.html">AudioSource</a></span> <span class="parameter-name">_audioSource</span>, {</span></li>
+<li><span class="parameter" id="param-onUpdate"><span class="type-annotation"><a href="../../typedefs_app_typedefs/OnChanged.html">OnChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../services_media_player_data_typedefs_media_types/MediaPlayStreamData.html">MediaPlayStreamData</a></span>&gt;</span>?</span> <span class="parameter-name">onUpdate</span>, </span></li>
+</ol>})
     </section>
     
 
@@ -63,7 +64,10 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">AudioPlayerService(this._audioSource);</code></pre>
+  <pre class="language-dart"><code class="language-dart">AudioPlayerService(this._audioSource, {this.onUpdate}) {
+  _stateStreamController = StreamController&lt;MediaPlayStreamData&gt;();
+  _observePlayback();
+}</code></pre>
 </section>
 
 

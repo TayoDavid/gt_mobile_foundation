@@ -77,7 +77,8 @@
   <pre class="language-dart"><code class="language-dart">@override
 Future&lt;void&gt; unloadSource() async {
   await reset();
-  _controller.removeListener(_onControllerUpdate);
+  _controller.removeListener(_ctrlListener);
+  await _stateStreamController.close();
 }</code></pre>
 </section>
 

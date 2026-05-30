@@ -54,7 +54,7 @@
 
     
 <section class="desc markdown">
-  <p>An implementation of <a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a> and <a href="../services_media_player_media_player_interface/CaptionablePlayer-class.html">CaptionablePlayer</a> that handles video playback.</p>
+  <p>An implementation of <a href="../services_media_player_app_media_player/AppMediaPlayer-class.html">AppMediaPlayer</a> and <a href="../services_media_player_media_player_service/CaptionablePlayer-class.html">CaptionablePlayer</a> that handles video playback.</p>
 <p>This service encapsulates a <a href="https://pub.dev/documentation/video_player/2.11.1/video_player/VideoPlayerController-class.html">VideoPlayerController</a>. It internally converts
 the controller's <a href="https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html">ValueNotifier</a> updates into a reactive <a href="../services_media_player_video_player_service/VideoPlayerService/stateStream.html">stateStream</a> so that
 the UI can bind to video playback state seamlessly using the unified pattern.</p>
@@ -69,8 +69,8 @@ the UI can bind to video playback state seamlessly using the unified pattern.</p
   <dt>Implemented types</dt>
   <dd>
     <ul class="comma-separated clazz-relationships">
-        <li><a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a></li>
-        <li><a href="../services_media_player_media_player_interface/CaptionablePlayer-class.html">CaptionablePlayer</a></li>
+        <li><a href="../services_media_player_media_player_service/AppMediaPlayerService-class.html">AppMediaPlayerService</a></li>
+        <li><a href="../services_media_player_media_player_service/CaptionablePlayer-class.html">CaptionablePlayer</a></li>
     </ul>
   </dd>
         
@@ -88,7 +88,7 @@ the UI can bind to video playback state seamlessly using the unified pattern.</p
     <h2>Constructors</h2>
     <dl class="constructor-summary-list">
         <dt id="VideoPlayerService.new" class="callable">
-          <span class="name"><a href="../services_media_player_video_player_service/VideoPlayerService/VideoPlayerService.html">VideoPlayerService</a></span><span class="signature">(<span class="parameter" id="param-_controller"><span class="type-annotation"><a href="https://pub.dev/documentation/video_player/2.11.1/video_player/VideoPlayerController-class.html">VideoPlayerController</a></span> <span class="parameter-name">_controller</span></span>)</span>
+          <span class="name"><a href="../services_media_player_video_player_service/VideoPlayerService/VideoPlayerService.html">VideoPlayerService</a></span><span class="signature">(<span class="parameter" id="param-_controller"><span class="type-annotation"><a href="https://pub.dev/documentation/video_player/2.11.1/video_player/VideoPlayerController-class.html">VideoPlayerController</a></span> <span class="parameter-name">_controller</span>, {</span><span class="parameter" id="param-onUpdate"><span class="type-annotation"><a href="../typedefs_app_typedefs/OnChanged.html">OnChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_media_player_data_typedefs_media_types/MediaPlayStreamData.html">MediaPlayStreamData</a></span>&gt;</span>?</span> <span class="parameter-name">onUpdate</span></span>})</span>
         </dt>
         <dd>
           
@@ -146,6 +146,18 @@ the UI can bind to video playback state seamlessly using the unified pattern.</p
 <dd>
   Returns <code>true</code> if the media is currently playing.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onUpdate" class="property">
+  <span class="name"><a href="../services_media_player_video_player_service/VideoPlayerService/onUpdate.html">onUpdate</a></span>
+  <span class="signature">&#8594; <a href="../typedefs_app_typedefs/OnChanged.html">OnChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_media_player_data_typedefs_media_types/MediaPlayStreamData.html">MediaPlayStreamData</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  A callback that is invoked when the playback state changes.
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 

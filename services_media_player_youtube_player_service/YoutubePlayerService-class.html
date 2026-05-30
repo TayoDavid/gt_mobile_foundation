@@ -54,7 +54,7 @@
 
     
 <section class="desc markdown">
-  <p>An implementation of <a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a> that handles YouTube video playback.</p>
+  <p>An implementation of <a href="../services_media_player_app_media_player/AppMediaPlayer-class.html">AppMediaPlayer</a> that handles YouTube video playback.</p>
 <p>This service encapsulates a <a href="https://pub.dev/documentation/youtube_player_flutter/9.1.3/youtube_player_flutter/YoutubePlayerController-class.html">YoutubePlayerController</a> from <code>youtube_player_flutter</code>.
 It converts the controller's state changes into the unified <a href="../services_media_player_data_typedefs_media_types/MediaPlayStreamData.html">MediaPlayStreamData</a>
 format and broadcasts them via <a href="../services_media_player_youtube_player_service/YoutubePlayerService/stateStream.html">stateStream</a>.</p>
@@ -69,7 +69,7 @@ format and broadcasts them via <a href="../services_media_player_youtube_player_
   <dt>Implemented types</dt>
   <dd>
     <ul class="comma-separated clazz-relationships">
-        <li><a href="../services_media_player_media_player_interface/AppMediaPlayer-class.html">AppMediaPlayer</a></li>
+        <li><a href="../services_media_player_media_player_service/AppMediaPlayerService-class.html">AppMediaPlayerService</a></li>
     </ul>
   </dd>
         
@@ -87,7 +87,7 @@ format and broadcasts them via <a href="../services_media_player_youtube_player_
     <h2>Constructors</h2>
     <dl class="constructor-summary-list">
         <dt id="YoutubePlayerService.new" class="callable">
-          <span class="name"><a href="../services_media_player_youtube_player_service/YoutubePlayerService/YoutubePlayerService.html">YoutubePlayerService</a></span><span class="signature">(<span class="parameter" id="param-_controller"><span class="type-annotation"><a href="https://pub.dev/documentation/youtube_player_flutter/9.1.3/youtube_player_flutter/YoutubePlayerController-class.html">YoutubePlayerController</a></span> <span class="parameter-name">_controller</span></span>)</span>
+          <span class="name"><a href="../services_media_player_youtube_player_service/YoutubePlayerService/YoutubePlayerService.html">YoutubePlayerService</a></span><span class="signature">(<span class="parameter" id="param-_controller"><span class="type-annotation"><a href="https://pub.dev/documentation/youtube_player_flutter/9.1.3/youtube_player_flutter/YoutubePlayerController-class.html">YoutubePlayerController</a></span> <span class="parameter-name">_controller</span>, {</span><span class="parameter" id="param-onUpdate"><span class="type-annotation"><a href="../typedefs_app_typedefs/OnChanged.html">OnChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_media_player_data_typedefs_media_types/MediaPlayStreamData.html">MediaPlayStreamData</a></span>&gt;</span>?</span> <span class="parameter-name">onUpdate</span></span>})</span>
         </dt>
         <dd>
           
@@ -145,6 +145,18 @@ format and broadcasts them via <a href="../services_media_player_youtube_player_
 <dd>
   Returns <code>true</code> if the media is currently playing.
   <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="onUpdate" class="property">
+  <span class="name"><a href="../services_media_player_youtube_player_service/YoutubePlayerService/onUpdate.html">onUpdate</a></span>
+  <span class="signature">&#8594; <a href="../typedefs_app_typedefs/OnChanged.html">OnChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../services_media_player_data_typedefs_media_types/MediaPlayStreamData.html">MediaPlayStreamData</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+  A callback that is invoked when the playback state changes.
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 

@@ -78,7 +78,10 @@
 Future&lt;void&gt; unloadSource() async {
   try {
     await stop();
+    _stateSubscription?.cancel();
+    _positionSubscription?.cancel();
     _player.removeAudioSourceAt(0);
+    _stateStreamController.close();
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
   }

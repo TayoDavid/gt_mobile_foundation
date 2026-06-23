@@ -102,6 +102,18 @@
 
 </dd>
 
+        <dt id="biometricToken" class="property">
+  <span class="name"><a href="../services_session_app_session_service/AppSessionService/biometricToken.html">biometricToken</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  Retrieves the biometric token.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
         <dt id="deviceId" class="property">
   <span class="name"><a href="../services_session_app_session_service/AppSessionService/deviceId.html">deviceId</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
@@ -110,18 +122,6 @@
 </dt>
 <dd>
   Retrieves the unique device identifier.
-  <div class="features"><span class="feature">no setter</span></div>
-
-</dd>
-
-        <dt id="deviceToken" class="property">
-  <span class="name"><a href="../services_session_app_session_service/AppSessionService/deviceToken.html">deviceToken</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
-  
-
-</dt>
-<dd>
-  Retrieves the device token used for push notifications and biometrics.
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>
@@ -135,18 +135,6 @@
 <dd class="inherited">
   The hash code for this object.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
-
-</dd>
-
-        <dt id="hasSession" class="property">
-  <span class="name"><a href="../services_session_app_session_service/AppSessionService/hasSession.html">hasSession</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
-  
-
-</dt>
-<dd>
-  Checks if any session data exists.
-  <div class="features"><span class="feature">no setter</span></div>
 
 </dd>
 
@@ -182,18 +170,6 @@
 </dt>
 <dd>
   Checks if the user is currently logged in with a valid session.
-  <div class="features"><span class="feature">no setter</span></div>
-
-</dd>
-
-        <dt id="lastEmail" class="property">
-  <span class="name"><a href="../services_session_app_session_service/AppSessionService/lastEmail.html">lastEmail</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
-  
-
-</dt>
-<dd>
-  Retrieves the last email address used to log in.
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>
@@ -246,6 +222,42 @@
 
 </dd>
 
+        <dt id="userId" class="property">
+  <span class="name"><a href="../services_session_app_session_service/AppSessionService/userId.html">userId</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  Retrieves the user id used to log in.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="userName" class="property">
+  <span class="name"><a href="../services_session_app_session_service/AppSessionService/userName.html">userName</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  Retrieves the last user name used to log in.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="userRole" class="property">
+  <span class="name"><a href="../services_session_app_session_service/AppSessionService/userRole.html">userRole</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd>
+  Retrieves the user role used to log in.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
     </dl>
   </section>
 
@@ -282,14 +294,14 @@
 </dd>
 
         <dt id="createSession" class="callable">
-  <span class="name"><a href="../services_session_app_session_service/AppSessionService/createSession.html">createSession</a></span><span class="signature">(<wbr>{<span class="parameter" id="createSession-param-authData"><span>required</span> <span class="type-annotation"><a href="../data_models_session_data/SessionData-class.html">SessionData</a></span> <span class="parameter-name">authData</span></span>})
+  <span class="name"><a href="../services_session_app_session_service/AppSessionService/createSession.html">createSession</a></span><span class="signature">(<wbr>{<span class="parameter" id="createSession-param-data"><span>required</span> <span class="type-annotation"><a href="../data_models_session_data/SessionData-class.html">SessionData</a></span> <span class="parameter-name">data</span></span>})
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a></span>
   </span>
   
 
 </dt>
 <dd>
-  Creates a new session with the provided <code>authData</code>.
+  Creates a new session with the provided <code>data</code>.
   
 
 </dd>
@@ -308,14 +320,14 @@
 </dd>
 
         <dt id="enableBioLogin" class="callable">
-  <span class="name"><a href="../services_session_app_session_service/AppSessionService/enableBioLogin.html">enableBioLogin</a></span><span class="signature">(<wbr><span class="parameter" id="enableBioLogin-param-deviceToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">deviceToken</span></span>)
+  <span class="name"><a href="../services_session_app_session_service/AppSessionService/enableBioLogin.html">enableBioLogin</a></span><span class="signature">(<wbr><span class="parameter" id="enableBioLogin-param-token"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">token</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a></span>
   </span>
   
 
 </dt>
 <dd>
-  Enables biometric login capabilities, requiring a <code>deviceToken</code>.
+  Enables biometric login capabilities, requiring a <a href="../services_session_app_session_service/AppSessionService/biometricToken.html">biometricToken</a>.
   
 
 </dd>

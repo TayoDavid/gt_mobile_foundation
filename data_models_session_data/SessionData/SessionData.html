@@ -55,14 +55,17 @@
     <section class="multi-line-signature">
       
       <span class="name ">SessionData</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="param-accessToken"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">accessToken</span>, </span></li>
-<li><span class="parameter" id="param-expiresAt"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">expiresAt</span>, </span></li>
-<li><span class="parameter" id="param-refreshAt"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">refreshAt</span>, </span></li>
+<li><span class="parameter" id="param-accessTokenExpiresAt"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">accessTokenExpiresAt</span>, </span></li>
 <li><span class="parameter" id="param-refreshToken"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">refreshToken</span>, </span></li>
+<li><span class="parameter" id="param-refreshTokenExpiresAt"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">refreshTokenExpiresAt</span>, </span></li>
 <li><span class="parameter" id="param-deviceId"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">deviceId</span>, </span></li>
 <li><span class="parameter" id="param-hasEnabledBioAuth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">hasEnabledBioAuth</span> = <span class="default-value">false</span>, </span></li>
-<li><span class="parameter" id="param-lastEmail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">lastEmail</span>, </span></li>
-<li><span class="parameter" id="param-userUuid"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userUuid</span>, </span></li>
-<li><span class="parameter" id="param-deviceToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceToken</span>, </span></li>
+<li><span class="parameter" id="param-userName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userName</span>, </span></li>
+<li><span class="parameter" id="param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userId</span>, </span></li>
+<li><span class="parameter" id="param-userRole"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userRole</span>, </span></li>
+<li><span class="parameter" id="param-biometricToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">biometricToken</span>, </span></li>
+<li><span class="parameter" id="param-isTwoFactorEnabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isTwoFactorEnabled</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="param-biometricTokenExpiresAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">biometricTokenExpiresAt</span>, </span></li>
 </ol>})
     </section>
     
@@ -73,16 +76,18 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">SessionData({
   required this.accessToken,
-  required this.expiresAt,
-  required this.refreshAt,
+  required this.accessTokenExpiresAt,
   required this.refreshToken,
+  required this.refreshTokenExpiresAt,
   required this.deviceId,
   this.hasEnabledBioAuth = false,
-  this.lastEmail,
-  this.userUuid,
-  this.deviceToken,
-}) : id = 1,
-     createdAt = DateTime.now().millisecondsSinceEpoch;</code></pre>
+  this.userName,
+  this.userId,
+  this.userRole,
+  this.biometricToken,
+  this.isTwoFactorEnabled = false,
+  this.biometricTokenExpiresAt,
+}) : lastLoginTime = DateTime.now().millisecondsSinceEpoch;</code></pre>
 </section>
 
 

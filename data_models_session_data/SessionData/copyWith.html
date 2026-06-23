@@ -57,15 +57,17 @@
 <span class="returntype"><a href="../../data_models_session_data/SessionData-class.html">SessionData</a></span>
 <span class="name ">copyWith</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="copyWith-param-accessToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">accessToken</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-refreshToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">refreshToken</span>, </span></li>
-<li><span class="parameter" id="copyWith-param-deviceToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceToken</span>, </span></li>
-<li><span class="parameter" id="copyWith-param-expiresAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">expiresAt</span>, </span></li>
-<li><span class="parameter" id="copyWith-param-refreshAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">refreshAt</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-biometricToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">biometricToken</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-lastLoginTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">lastLoginTime</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-accessTokenExpiresAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">accessTokenExpiresAt</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-refreshTokenExpiresAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">refreshTokenExpiresAt</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-biometricTokenExpiresAt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">biometricTokenExpiresAt</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-hasEnabledBioAuth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">hasEnabledBioAuth</span>, </span></li>
-<li><span class="parameter" id="copyWith-param-hasActiveSubscription"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">hasActiveSubscription</span>, </span></li>
-<li><span class="parameter" id="copyWith-param-hasVerifiedEmail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">hasVerifiedEmail</span>, </span></li>
-<li><span class="parameter" id="copyWith-param-lastEmail"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">lastEmail</span>, </span></li>
-<li><span class="parameter" id="copyWith-param-userUuid"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userUuid</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-deviceId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">deviceId</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-userName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userName</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-userRole"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userRole</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-userId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">userId</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-isTwoFactorEnabled"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isTwoFactorEnabled</span>, </span></li>
 </ol>})
 
       
@@ -80,27 +82,34 @@
   <pre class="language-dart"><code class="language-dart">SessionData copyWith({
   String? accessToken,
   String? refreshToken,
-  String? deviceToken,
-  int? expiresAt,
-  int? refreshAt,
+  String? biometricToken,
+  int? lastLoginTime,
+  int? accessTokenExpiresAt,
+  int? refreshTokenExpiresAt,
+  int? biometricTokenExpiresAt,
   bool? hasEnabledBioAuth,
-  bool? hasActiveSubscription,
-  bool? hasVerifiedEmail,
-  String? lastEmail,
-  String? userUuid,
   String? deviceId,
+  String? userName,
+  String? userRole,
+  String? userId,
+  bool? isTwoFactorEnabled,
 }) {
   return SessionData(
     accessToken: accessToken ?? this.accessToken,
-    deviceToken: deviceToken ?? this.deviceToken,
+    accessTokenExpiresAt: accessTokenExpiresAt ?? this.accessTokenExpiresAt,
     refreshToken: refreshToken ?? this.refreshToken,
+    refreshTokenExpiresAt:
+        refreshTokenExpiresAt ?? this.refreshTokenExpiresAt,
     deviceId: deviceId ?? this.deviceId,
-    refreshAt: refreshAt ?? this.refreshAt,
-    expiresAt: expiresAt ?? this.expiresAt,
     hasEnabledBioAuth: hasEnabledBioAuth ?? this.hasEnabledBioAuth,
-    lastEmail: lastEmail ?? this.lastEmail,
-    userUuid: userUuid ?? this.userUuid,
-  );
+    userName: userName ?? this.userName,
+    userId: userId ?? this.userId,
+    userRole: userRole ?? this.userRole,
+    biometricToken: biometricToken ?? this.biometricToken,
+    isTwoFactorEnabled: isTwoFactorEnabled ?? this.isTwoFactorEnabled,
+    biometricTokenExpiresAt:
+        biometricTokenExpiresAt ?? this.biometricTokenExpiresAt,
+  )..lastLoginTime = lastLoginTime ?? this.lastLoginTime;
 }</code></pre>
 </section>
 

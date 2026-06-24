@@ -276,6 +276,32 @@ the Keychain. On Android, it uses EncryptedSharedPreferences.</p>
 
 </dd>
 
+        <dt id="unWatchItem" class="callable">
+  <span class="name"><a href="../services_storage_app_secure_storage_service/AppSecureStorageService/unWatchItem.html">unWatchItem</a></span><span class="signature">(<wbr><span class="parameter" id="unWatchItem-param-key"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all callbacks from the watch list for the given <code>key</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="unWatchItems" class="callable">
+  <span class="name"><a href="../services_storage_app_secure_storage_service/AppSecureStorageService/unWatchItems.html">unWatchItems</a></span><span class="signature">(<wbr><span class="parameter" id="unWatchItems-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">keys</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes all callbacks from the watch list for the given <code>keys</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
         <dt id="watchItem" class="callable">
   <span class="name"><a href="../services_storage_app_secure_storage_service/AppSecureStorageService/watchItem.html">watchItem</a></span><span class="signature">(<wbr><span class="parameter" id="watchItem-param-key"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span><span class="parameter" id="watchItem-param-callback"><span class="type-annotation"><a href="../typedefs_app_typedefs/OnChanged.html">OnChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span></span> <span class="parameter-name">callback</span></span>)
     <span class="returntype parameter">&#8594; void</span>

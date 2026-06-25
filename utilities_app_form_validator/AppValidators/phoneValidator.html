@@ -82,14 +82,18 @@
   bool isRequired = true,
 }) {
   final isEmpty = _isEmpty(tel);
+  final hasCountryCode = countryCode.hasValue;
 
-  if (!isRequired &amp;&amp; isEmpty) return null;
+  if (!isRequired &amp;&amp; (isEmpty &amp;&amp; !hasCountryCode)) return null;
 
   if (isEmpty) {
     return emptyMessage ?? strings.fieldRequired.tr();
   }
 
-  if (!AppRegex.phoneRegex.hasMatch(&quot;$countryCode$tel&quot;)) {
+  String normalisedTel = tel?.replaceAll(AppRegex.space, &#39;&#39;) ?? &quot;&quot;;
+  if (hasCountryCode) normalisedTel = &quot;$countryCode $normalisedTel&quot;;
+
+  if (!AppRegex.phoneRegex.hasMatch(normalisedTel)) {
     return errorMessage ?? strings.invalidPhone.tr();
   }
   return null;

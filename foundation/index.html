@@ -64,6 +64,14 @@
     <section class="summary offset-anchor" id="classes">
       <h2>Classes</h2>
       <dl>
+          <dt id="ApiResponse">
+  <span class="name "><a href="../data_models_network_response/ApiResponse-class.html">ApiResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A standard wrapper for API responses parsed from network requests.
+</dd>
+
           <dt id="AppAmountFormatter">
   <span class="name "><a href="../utilities_app_text_formatter/AppAmountFormatter-class.html">AppAmountFormatter</a></span> 
 
@@ -191,14 +199,6 @@
 </dt>
 <dd>
   The standard implementation of <a href="../services_crypto_crypto_service/AppCryptoService-class.html">AppCryptoService</a> using AES and RSA algorithms.
-</dd>
-
-          <dt id="AppCryptoServiceMock">
-  <span class="name "><a href="../services_crypto_crypto_service_mock/AppCryptoServiceMock-class.html">AppCryptoServiceMock</a></span> 
-
-</dt>
-<dd>
-  A mock implementation of <a href="../services_crypto_crypto_service/AppCryptoService-class.html">AppCryptoService</a> that uses Base64 encoding.
 </dd>
 
           <dt id="AppDateUtil">
@@ -680,11 +680,11 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="NoResponse">
-  <span class="name "><a href="../data_models_network_response/NoResponse-class.html">NoResponse</a></span> 
+  <span class="name "><a href="../data_models_task_response/NoResponse-class.html">NoResponse</a></span> 
 
 </dt>
 <dd>
-  
+  A sentinel class representing the absence of a response.
 </dd>
 
           <dt id="PaginatedData">
@@ -736,23 +736,24 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="TaskError">
-  <span class="name "><a href="../data_models_network_response/TaskError-class.html">TaskError</a></span> 
+  <span class="name "><a href="../data_models_task_response/TaskError-class.html">TaskError</a></span> 
 
 </dt>
 <dd>
-  
+  Encapsulates the details of a task failure, including a human-readable <a href="../data_models_task_response/TaskError/message.html">message</a>,
+an HTTP <a href="../data_models_task_response/TaskError/statusCode.html">statusCode</a> (defaulting to 500), and the raw <a href="../data_models_task_response/TaskError/error.html">error</a> object.
 </dd>
 
           <dt id="TaskFailure">
-  <span class="name "><a href="../data_models_network_response/TaskFailure-class.html">TaskFailure</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+  <span class="name "><a href="../data_models_task_response/TaskFailure-class.html">TaskFailure</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
 
 </dt>
 <dd>
-  
+  A failed <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> containing the <a href="../data_models_task_response/TaskFailure/error.html">error</a> details.
 </dd>
 
           <dt id="TaskResponse">
-  <span class="name "><a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+  <span class="name "><a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
 
 </dt>
 <dd>
@@ -760,11 +761,11 @@ such as emails, passwords, dates, amounts, and custom regex patterns.
 </dd>
 
           <dt id="TaskSuccess">
-  <span class="name "><a href="../data_models_network_response/TaskSuccess-class.html">TaskSuccess</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+  <span class="name "><a href="../data_models_task_response/TaskSuccess-class.html">TaskSuccess</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
 
 </dt>
 <dd>
-  
+  A successful <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> containing the payload <a href="../data_models_task_response/TaskSuccess/data.html">data</a> of type <code>T</code>.
 </dd>
 
           <dt id="UsecaseModel">
@@ -980,12 +981,12 @@ date comparisons and formatting.
 
           <dt id="HttpSnapshotExtension">
   <span class="name "><a href="../extensions_snapshot_extensions/HttpSnapshotExtension.html">HttpSnapshotExtension</a></span>
-  on <a href="https://api.flutter.dev/flutter/widgets/AsyncSnapshot-class.html">AsyncSnapshot</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>
+  on <a href="https://api.flutter.dev/flutter/widgets/AsyncSnapshot-class.html">AsyncSnapshot</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>
   
 
 </dt>
 <dd>
-  Extension specifically on <a href="https://api.flutter.dev/flutter/widgets/AsyncSnapshot-class.html">AsyncSnapshot</a> holding a <a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a> to quickly
+  Extension specifically on <a href="https://api.flutter.dev/flutter/widgets/AsyncSnapshot-class.html">AsyncSnapshot</a> holding a <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> to quickly
 determine success or failure states.
 </dd>
 
@@ -1029,16 +1030,6 @@ determine success or failure states.
   
 </dd>
 
-          <dt id="NonNullListExtension">
-  <span class="name "><a href="../extensions_list_extensions/NonNullListExtension.html">NonNullListExtension</a></span>
-  on <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>
-  
-
-</dt>
-<dd>
-  Extensions on non-nullable <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a> for data manipulation.
-</dd>
-
           <dt id="NotifierExtension">
   <span class="name "><a href="../extensions_text_editing_controller_extensions/NotifierExtension.html">NotifierExtension</a></span>
   on <a href="https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html">ValueNotifier</a>
@@ -1080,6 +1071,16 @@ determine success or failure states.
 the main configuration and localized strings.
 </dd>
 
+          <dt id="ResponseExtension">
+  <span class="name "><a href="../extensions_object_extension/ResponseExtension.html">ResponseExtension</a></span>
+  on <a href="https://pub.dev/documentation/dio/5.9.2/dio/Response-class.html">Response</a>
+  
+
+</dt>
+<dd>
+  Extension on <a href="https://pub.dev/documentation/dio/5.9.2/dio/Response-class.html">Response</a> to provide a convenient method for copying and updating response data.
+</dd>
+
           <dt id="SnapshotExtension">
   <span class="name "><a href="../extensions_snapshot_extensions/SnapshotExtension.html">SnapshotExtension</a></span>
   on <a href="https://api.flutter.dev/flutter/widgets/AsyncSnapshot-class.html">AsyncSnapshot</a>
@@ -1101,13 +1102,13 @@ the main configuration and localized strings.
 </dd>
 
           <dt id="TaskResponseExtension">
-  <span class="name "><a href="../data_models_network_response/TaskResponseExtension.html">TaskResponseExtension</a></span>
-  on <a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>
+  <span class="name "><a href="../data_models_task_response/TaskResponseExtension.html">TaskResponseExtension</a></span>
+  on <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>
   
 
 </dt>
 <dd>
-  
+  Convenience extensions on <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> for easier state checking and data retrieval.
 </dd>
 
           <dt id="TextCtrlExtension">
@@ -1436,13 +1437,13 @@ the main configuration and localized strings.
           
   <dt id="TaskCallResponse" class="">
   <span class="name"><a href="../typedefs_app_typedefs/TaskCallResponse.html">TaskCallResponse</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;
-    = <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>
+    = <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>
   </span>
   
 
 </dt>
 <dd>
-  Signature for an asynchronous task that returns a <a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a> of type <code>T</code>.
+  Signature for an asynchronous task that returns a <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> of type <code>T</code>.
   
 
 </dd>
@@ -1457,7 +1458,7 @@ the main configuration and localized strings.
 
   </dt>
   <dd>
-    Signature for an asynchronous task that takes input <code>K</code> and returns <a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a> of <code>T</code>.
+    Signature for an asynchronous task that takes input <code>K</code> and returns <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> of <code>T</code>.
     
 
   </dd>
@@ -1465,13 +1466,13 @@ the main configuration and localized strings.
           
   <dt id="TaskNotifier" class="">
   <span class="name"><a href="../typedefs_app_typedefs/TaskNotifier.html">TaskNotifier</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;
-    = <a href="https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html">ValueNotifier</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>?</span>&gt;</span>
+    = <a href="https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html">ValueNotifier</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>?</span>&gt;</span>
   </span>
   
 
 </dt>
 <dd>
-  A <a href="https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html">ValueNotifier</a> that holds a <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a> resulting in a <a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a> of type <code>T</code>.
+  A <a href="https://api.flutter.dev/flutter/foundation/ValueNotifier-class.html">ValueNotifier</a> that holds a <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a> resulting in a <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> of type <code>T</code>.
 Useful for tracking asynchronous operations and their loading/error states.
   
 
@@ -1594,6 +1595,7 @@ Useful for tracking asynchronous operations and their loading/error states.
       <li><a href="../data_models_network_response/">data/models/network_response</a></li>
       <li><a href="../data_models_session_data/">data/models/session_data</a></li>
       <li><a href="../data_models_state_model/">data/models/state_model</a></li>
+      <li><a href="../data_models_task_response/">data/models/task_response</a></li>
       <li><a href="../data_models_usecase_model/">data/models/usecase_model</a></li>
       <li><a href="../data_podos_app_analytics_data/">data/podos/app_analytics_data</a></li>
       <li><a href="../data_podos_color_set/">data/podos/color_set</a></li>
@@ -1632,7 +1634,6 @@ Useful for tracking asynchronous operations and their loading/error states.
       <li><a href="../services_crypto_crypto/">services/crypto/crypto</a></li>
       <li><a href="../services_crypto_crypto_service/">services/crypto/crypto_service</a></li>
       <li><a href="../services_crypto_crypto_service_impl/">services/crypto/crypto_service_impl</a></li>
-      <li><a href="../services_crypto_crypto_service_mock/">services/crypto/crypto_service_mock</a></li>
       <li><a href="../services_firebase_config_config/">services/firebase_config/config</a></li>
       <li><a href="../services_firebase_config_firebase_config/">services/firebase_config/firebase_config</a></li>
       <li><a href="../services_fs_app_file_plugin/">services/fs/app_file_plugin</a></li>

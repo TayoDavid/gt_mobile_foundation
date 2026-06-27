@@ -79,10 +79,17 @@
   <pre class="language-dart"><code class="language-dart">@override
 String encrypt(String data, {AppCryptoMode mode = .base16}) {
   try {
-    final cipherText = _aesCipher.encrypt(data, iv: _iv);
+    final iv = IV.fromSecureRandom(12);
+    final cipher = _aesCipher.encrypt(
+      data,
+      iv: iv,
+      associatedData: _associatedData,
+    );
+    final resolvedCipher = _resolveCipherBytes(cipher.bytes, iv);
+
     return switch (mode) {
-      AppCryptoMode.base16 =&gt; cipherText.base16.toUpperCase(),
-      AppCryptoMode.base64 =&gt; cipherText.base64,
+      .base16 =&gt; resolvedCipher.base16,
+      .base64 =&gt; resolvedCipher.base64,
     };
   } catch (e, t) {
     AppLogger.severe(&quot;Encryption failed: $e&quot;, stackTrace: t, error: e);

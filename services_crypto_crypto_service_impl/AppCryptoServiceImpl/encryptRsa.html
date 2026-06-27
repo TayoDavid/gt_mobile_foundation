@@ -81,8 +81,8 @@ String? encryptRsa(String data, {AppCryptoMode mode = .base16}) {
   try {
     final encrypted = _rsaCipher?.encrypt(data);
     return switch (mode) {
-      AppCryptoMode.base16 =&gt; encrypted?.base16.toUpperCase(),
-      AppCryptoMode.base64 =&gt; encrypted?.base64,
+      .base16 =&gt; encrypted?.base16.upper,
+      .base64 =&gt; encrypted?.base64,
     };
   } catch (e, t) {
     AppLogger.severe(&quot;RSA encryption failed: $e&quot;, stackTrace: t, error: e);

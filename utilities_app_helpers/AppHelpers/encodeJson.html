@@ -68,8 +68,13 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">static FutureOr&lt;String&gt; encodeJson(Object data) {
-  if (&quot;$data&quot;.codeUnits.length &lt; 50 * 1024) return _parseAndEncode(data);
-  return compute(_parseAndEncode, data);
+  try {
+    if (&quot;$data&quot;.codeUnits.length &lt; 50 * 1024) return _parseAndEncode(data);
+    return compute(_parseAndEncode, data);
+  } catch (e, t) {
+    AppLogger.severe(&quot;JSON encoding failed: $e&quot;, stackTrace: t, error: e);
+    return &quot;&quot;;
+  }
 }</code></pre>
 </section>
 

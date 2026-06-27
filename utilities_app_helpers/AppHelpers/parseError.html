@@ -73,59 +73,44 @@
   String defaultMessage = &quot;&quot;,
 }) {
   try {
+    if (error is SocketException) {
+      final data = error.message;
+      int? code = error.osError?.errorCode;
+      return {&quot;message&quot;: data, &quot;statusCode&quot;: code ?? 500};
+    }
+
+    if (error is TimeoutException) {
+      final data = error.message;
+      return {&quot;message&quot;: data, &quot;statusCode&quot;: 408};
+    }
+
+    if (error is String) {
+      return {&quot;message&quot;: error, &quot;statusCode&quot;: 500};
+    }
+
     if (error is DioException) {
       final data = error.response?.data;
-      final code = error.response?.statusCode;
+      int? code = error.response?.statusCode;
+      String message = error.message ?? defaultMessage;
 
-      if (data != null) {
-        String message = &quot;&quot;;
-
-        if (data is! Map) {
-          return {&quot;message&quot;: &quot;$data&quot;, &quot;statusCode&quot;: code};
-        }
-
-        final messageData = data[&quot;message&quot;];
-
-        if (messageData is String) {
-          message = messageData;
-        }
-
-        if (messageData is List) {
-          message = messageData.map((it) =&gt; &quot;$it&quot;).join(&quot;, &quot;);
-        }
-
-        return {&quot;message&quot;: message, &quot;statusCode&quot;: code ?? 500};
+      if (data is Map) {
+        return _parseErrorMap(
+          data,
+          defaultMessage: defaultMessage,
+          statusCode: code ?? 500,
+        );
       }
+
+      return {&quot;message&quot;: message, &quot;statusCode&quot;: code ?? 500};
     }
 
     if (error is Map) {
-      if (error[&quot;error&quot;] != null &amp;&amp;
-          error[&quot;error&quot;] is String &amp;&amp;
-          error[&quot;error&quot;].isNotEmpty) {
-        return {&quot;message&quot;: error[&quot;error&quot;], &quot;statusCode&quot;: 400};
-      } else if (error.containsKey(&quot;message&quot;) &amp;&amp;
-          error[&quot;message&quot;] != null &amp;&amp;
-          error[&quot;message&quot;] is String) {
-        final String message = error[&quot;message&quot;] ?? &quot;&quot;;
-        return {&quot;message&quot;: message, &quot;statusCode&quot;: 400};
-      } else if (error.containsKey(&quot;statusMessage&quot;) &amp;&amp;
-          error[&quot;statusMessage&quot;] != null &amp;&amp;
-          error[&quot;statusMessage&quot;] is String) {
-        final String message = error[&quot;statusMessage&quot;] ?? &quot;&quot;;
-        return {&quot;message&quot;: message, &quot;statusCode&quot;: 400};
-      } else {
-        if (error.containsKey(&quot;data&quot;) &amp;&amp; error[&quot;data&quot;] != null) {
-          return parseError(error[&quot;data&quot;]);
-        }
-        return {&quot;message&quot;: defaultMessage, &quot;statusCode&quot;: 400};
-      }
+      return _parseErrorMap(error, defaultMessage: defaultMessage);
     }
-    if (error is String) {
-      return {&quot;message&quot;: error, &quot;statusCode&quot;: 400};
-    }
-    return {&quot;message&quot;: defaultMessage, &quot;statusCode&quot;: 400};
+
+    return {&quot;message&quot;: defaultMessage, &quot;statusCode&quot;: 500};
   } catch (_) {
-    return {&quot;message&quot;: defaultMessage, &quot;statusCode&quot;: 400};
+    return {&quot;message&quot;: defaultMessage, &quot;statusCode&quot;: 500};
   }
 }</code></pre>
 </section>

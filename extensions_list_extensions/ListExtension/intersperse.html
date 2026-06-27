@@ -54,8 +54,8 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>?</span>
-<span class="name ">intersperse</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="intersperse-param-interspersend"><span class="type-annotation">T</span> <span class="parameter-name">interspersend</span></span></li>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a>?</span>
+<span class="name ">intersperse</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="intersperse-param-interspersend"><span class="type-annotation">dynamic</span> <span class="parameter-name">interspersend</span></span></li>
 </ol>)
 
       
@@ -71,16 +71,14 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">List&lt;T&gt;? intersperse(T interspersend) {
+  <pre class="language-dart"><code class="language-dart">List&lt;dynamic&gt;? intersperse(dynamic interspersend) {
   try {
-    if (this == null) return null;
-    if (this!.isEmpty) return [];
-    if (this!.length == 1) return [this!.first, interspersend];
-    final last = this!.last;
-    this!.removeLast();
-    final map2d = mapList((it) =&gt; [it, interspersend]);
-    List&lt;T&gt; flatList = map2d.fold([], (p, n) =&gt; [...p, ...n]);
-    return [...flatList, last];
+    if (!hasValue || (this?.length ?? 0) &lt; 2) return this ?? [];
+    final last = this?.last;
+    final slice = this?.sublist(0, this!.length - 1);
+    final map2d = slice?.mapList((it) =&gt; [it, interspersend]) ?? [];
+    List flatList = map2d.fold([], (p, n) =&gt; [...p, ...n]);
+    return [...flatList, ?last];
   } catch (e, t) {
     AppLogger.severe(&quot;$e&quot;, stackTrace: t);
     return this ?? [];

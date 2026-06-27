@@ -81,13 +81,21 @@ void onRequest(
   RequestOptions options,
   RequestInterceptorHandler handler,
 ) async {
-  final data = options.data;
-  if (data is List || data is Map || data is String) {
-    final encryptedData = _service.encrypt(&quot;$data&quot;);
-    options = options.copyWith(data: encryptedData);
-    AppLogger.info(&quot;PlainText: $data -&gt; CipherText: $encryptedData&quot;);
+  try {
+    final data = options.data;
+    if (data is List || data is Map || data is String) {
+      final encryptedData = await _getCiphertext(data);
+      options = options.copyWith(
+        data: encryptedData,
+        headers: {...options.headers, &quot;App-Tag&quot;: _encryptedAppTag},
+      );
+      AppLogger.info(&quot;PlainText: $data -&gt; CipherText: $encryptedData&quot;);
+    }
+    return handler.next(options);
+  } catch (e, t) {
+    AppLogger.severe(&quot;Encryption failed: $e&quot;, stackTrace: t, error: e);
+    return handler.next(options);
   }
-  return handler.next(options);
 }</code></pre>
 </section>
 

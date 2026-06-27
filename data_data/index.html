@@ -64,6 +64,14 @@
     <section class="summary offset-anchor" id="classes">
       <h2>Classes</h2>
       <dl>
+          <dt id="ApiResponse">
+  <span class="name "><a href="../data_models_network_response/ApiResponse-class.html">ApiResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A standard wrapper for API responses parsed from network requests.
+</dd>
+
           <dt id="AppAnalyticsData">
   <span class="name "><a href="../data_podos_app_analytics_data/AppAnalyticsData-class.html">AppAnalyticsData</a></span> 
 
@@ -227,11 +235,11 @@ such as currency symbols and bullet points.
 </dd>
 
           <dt id="NoResponse">
-  <span class="name "><a href="../data_models_network_response/NoResponse-class.html">NoResponse</a></span> 
+  <span class="name "><a href="../data_models_task_response/NoResponse-class.html">NoResponse</a></span> 
 
 </dt>
 <dd>
-  
+  A sentinel class representing the absence of a response.
 </dd>
 
           <dt id="PaginatedData">
@@ -275,23 +283,24 @@ such as currency symbols and bullet points.
 </dd>
 
           <dt id="TaskError">
-  <span class="name "><a href="../data_models_network_response/TaskError-class.html">TaskError</a></span> 
+  <span class="name "><a href="../data_models_task_response/TaskError-class.html">TaskError</a></span> 
 
 </dt>
 <dd>
-  
+  Encapsulates the details of a task failure, including a human-readable <a href="../data_models_task_response/TaskError/message.html">message</a>,
+an HTTP <a href="../data_models_task_response/TaskError/statusCode.html">statusCode</a> (defaulting to 500), and the raw <a href="../data_models_task_response/TaskError/error.html">error</a> object.
 </dd>
 
           <dt id="TaskFailure">
-  <span class="name "><a href="../data_models_network_response/TaskFailure-class.html">TaskFailure</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+  <span class="name "><a href="../data_models_task_response/TaskFailure-class.html">TaskFailure</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
 
 </dt>
 <dd>
-  
+  A failed <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> containing the <a href="../data_models_task_response/TaskFailure/error.html">error</a> details.
 </dd>
 
           <dt id="TaskResponse">
-  <span class="name "><a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+  <span class="name "><a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
 
 </dt>
 <dd>
@@ -299,11 +308,11 @@ such as currency symbols and bullet points.
 </dd>
 
           <dt id="TaskSuccess">
-  <span class="name "><a href="../data_models_network_response/TaskSuccess-class.html">TaskSuccess</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+  <span class="name "><a href="../data_models_task_response/TaskSuccess-class.html">TaskSuccess</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
 
 </dt>
 <dd>
-  
+  A successful <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> containing the payload <a href="../data_models_task_response/TaskSuccess/data.html">data</a> of type <code>T</code>.
 </dd>
 
           <dt id="UsecaseModel">
@@ -398,13 +407,13 @@ such as currency symbols and bullet points.
       <h2>Extensions</h2>
       <dl>
           <dt id="TaskResponseExtension">
-  <span class="name "><a href="../data_models_network_response/TaskResponseExtension.html">TaskResponseExtension</a></span>
-  on <a href="../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>
+  <span class="name "><a href="../data_models_task_response/TaskResponseExtension.html">TaskResponseExtension</a></span>
+  on <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>
   
 
 </dt>
 <dd>
-  
+  Convenience extensions on <a href="../data_models_task_response/TaskResponse-class.html">TaskResponse</a> for easier state checking and data retrieval.
 </dd>
 
       </dl>
@@ -456,6 +465,7 @@ such as currency symbols and bullet points.
       <li><a href="../data_models_network_response/">data/models/network_response</a></li>
       <li><a href="../data_models_session_data/">data/models/session_data</a></li>
       <li><a href="../data_models_state_model/">data/models/state_model</a></li>
+      <li><a href="../data_models_task_response/">data/models/task_response</a></li>
       <li><a href="../data_models_usecase_model/">data/models/usecase_model</a></li>
       <li><a href="../data_podos_app_analytics_data/">data/podos/app_analytics_data</a></li>
       <li><a href="../data_podos_color_set/">data/podos/color_set</a></li>
@@ -494,7 +504,6 @@ such as currency symbols and bullet points.
       <li><a href="../services_crypto_crypto/">services/crypto/crypto</a></li>
       <li><a href="../services_crypto_crypto_service/">services/crypto/crypto_service</a></li>
       <li><a href="../services_crypto_crypto_service_impl/">services/crypto/crypto_service_impl</a></li>
-      <li><a href="../services_crypto_crypto_service_mock/">services/crypto/crypto_service_mock</a></li>
       <li><a href="../services_firebase_config_config/">services/firebase_config/config</a></li>
       <li><a href="../services_firebase_config_firebase_config/">services/firebase_config/firebase_config</a></li>
       <li><a href="../services_fs_app_file_plugin/">services/fs/app_file_plugin</a></li>

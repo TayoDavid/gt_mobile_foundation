@@ -54,7 +54,7 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../data_models_network_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../data_models_task_response/TaskResponse-class.html">TaskResponse</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
 <span class="name ">requestHandler</span>&lt;<wbr><span class="type-parameter">T</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="requestHandler-param-func"><span class="type-annotation"><a href="../../typedefs_app_typedefs/FutureCall.html">FutureCall</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">func</span></span></li>
 </ol>)
 
@@ -63,10 +63,10 @@
     </section>
     
 <section class="desc markdown">
-  <p>Executes an asynchronous network <code>func</code> and returns a <a href="../../data_models_network_response/TaskResponse-class.html">TaskResponse</a>.</p>
+  <p>Executes an asynchronous network <code>func</code> and returns a <a href="../../data_models_task_response/TaskResponse-class.html">TaskResponse</a>.</p>
 <p>This wrapper catches <a href="https://pub.dev/documentation/dio/5.9.2/dio/DioException-class.html">DioException</a>, <a href="https://api.flutter.dev/flutter/dart-io/SocketException-class.html">SocketException</a>, <a href="https://api.flutter.dev/flutter/dart-async/TimeoutException-class.html">TimeoutException</a>,
-and any other arbitrary errors, parses them, and returns a <a href="../../data_models_network_response/TaskFailure-class.html">TaskFailure</a>.
-If successful, it returns a <a href="../../data_models_network_response/TaskSuccess-class.html">TaskSuccess</a> containing the data of type <code>T</code>.</p>
+and any other arbitrary errors, parses them, and returns a <a href="../../data_models_task_response/TaskFailure-class.html">TaskFailure</a>.
+If successful, it returns a <a href="../../data_models_task_response/TaskSuccess-class.html">TaskSuccess</a> containing the data of type <code>T</code>.</p>
 <p>In debug mode, it also logs the duration of the request.</p>
 </section>
 
@@ -90,9 +90,6 @@ If successful, it returns a <a href="../../data_models_network_response/TaskSucc
   } on DioException catch (e, t) {
     _reportError(&quot;DioException: ${e.message}&quot;, e, t);
     return TaskFailure(error: _getParsedError(e));
-  } on TaskError catch (e, t) {
-    _reportError(&quot;TaskError: ${e.message}&quot;, e, t);
-    return TaskFailure(error: e);
   } on TimeoutException catch (e, t) {
     _reportError(&quot;NetworkTimeout: ${e.message}&quot;, e, t);
     return TaskFailure(error: _getParsedError(e));

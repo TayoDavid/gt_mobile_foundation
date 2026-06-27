@@ -78,13 +78,31 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 void onResponse(Response response, ResponseInterceptorHandler handler) async {
-  final data = response.data;
-  if (data is String) {
-    final decryptedData = _service.decrypt(data);
-    response.data = AppHelpers.parseJson(decryptedData);
-    AppLogger.info(&quot;CipherText: $data -&gt; PlainText: $decryptedData&quot;);
+  AppLogger.info(&quot;Response Body: ${response.data}&quot;);
+  final payload = response.data;
+  String data = &quot;&quot;;
+  if (payload is String) data = payload;
+  if (payload is Map &amp;&amp; payload[&quot;data&quot;] is String) {
+    data = payload[&quot;data&quot;];
   }
-  return handler.next(response);
+  if (!data.hasValue) return handler.next(response);
+
+  final plainText = _service.decrypt(data, mode: mode);
+
+  &#47;&#47; Decryption failed (service returns original string on failure).
+  if (plainText == data) return handler.next(response);
+
+  final parsedData = await AppHelpers.parseJson(plainText);
+
+  &#47;&#47; If JSON parsing fails (e.g. decrypted payload is a raw string), fallback to plainText
+  final finalData = parsedData ?? plainText;
+
+  final newResponse = _resolveResponse(payload, finalData, response);
+  AppLogger.info(
+    &quot;CipherText: $data -&gt; PlainText: $plainText; ParsedData: ${newResponse.data}&quot;,
+  );
+
+  return handler.next(newResponse);
 }</code></pre>
 </section>
 

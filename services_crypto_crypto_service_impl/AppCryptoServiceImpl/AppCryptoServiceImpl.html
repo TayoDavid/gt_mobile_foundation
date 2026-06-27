@@ -55,13 +55,14 @@
     <section class="multi-line-signature">
       
       <span class="name ">AppCryptoServiceImpl</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="param-aesKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">aesKey</span>, </span></li>
-<li><span class="parameter" id="param-aesVector"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">aesVector</span>, </span></li>
+<li><span class="parameter" id="param-appTag"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appTag</span>, </span></li>
 <li><span class="parameter" id="param-rsaPublicKeyPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rsaPublicKeyPath</span>, </span></li>
+<li><span class="parameter" id="param-tamperProof"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">tamperProof</span>, </span></li>
 </ol>})
     </section>
     
 <section class="desc markdown">
-  <p>Initializes the service with <code>aesKey</code>, <code>aesVector</code>, and an optional <code>rsaPublicKeyPath</code>.</p>
+  <p>Initializes the service with <code>aesKey</code>, <code>appTag</code>, and an optional <code>rsaPublicKeyPath</code>.</p>
 </section>
 
 
@@ -70,11 +71,11 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">AppCryptoServiceImpl({
   required this.aesKey,
-  required this.aesVector,
+  required this.appTag,
   this.rsaPublicKeyPath,
+  required this.tamperProof,
 }) {
   _aesCipher = Encrypter(AES(Key.fromUtf8(aesKey), mode: .gcm));
-  _iv = IV.fromUtf8(aesVector);
   _initRsaCipher();
 }</code></pre>
 </section>

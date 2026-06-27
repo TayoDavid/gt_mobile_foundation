@@ -78,7 +78,7 @@
       &#39;packages&#47;gt_mobile_foundation&#47;assets&#47;resources&#47;countries.json&#39;,
       cache: true,
     );
-    List rawData = await AppHelpers.parseJson(req);
+    List rawData = (await AppHelpers.parseJson(req)) ?? [];
     List&lt;Country&gt; countries = [];
 
     for (var it in rawData) {

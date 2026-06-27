@@ -79,12 +79,25 @@
   <pre class="language-dart"><code class="language-dart">@override
 String decrypt(String data, {AppCryptoMode mode = .base16}) {
   try {
-    return switch (mode) {
-      AppCryptoMode.base16 =&gt; _aesCipher.decrypt16(data, iv: _iv),
-      AppCryptoMode.base64 =&gt; _aesCipher.decrypt64(data, iv: _iv),
+    Uint8List cipherBytes = switch (mode) {
+      .base16 =&gt; Encrypted.fromBase16(data).bytes,
+      .base64 =&gt; Encrypted.fromBase64(data).bytes,
     };
+
+    if (cipherBytes.length &lt; 12) {
+      throw Exception(&quot;Invalid ciphertext length for AES-GCM&quot;);
+    }
+
+    final iv = IV(cipherBytes.sublist(0, 12));
+    cipherBytes = cipherBytes.sublist(12);
+
+    return _aesCipher.decrypt(
+      Encrypted(cipherBytes),
+      iv: iv,
+      associatedData: _associatedData,
+    );
   } catch (e, t) {
-    AppLogger.severe(&quot;Dencryption failed: $e&quot;, stackTrace: t, error: e);
+    AppLogger.severe(&quot;Decryption failed: $e&quot;, stackTrace: t, error: e);
     return data;
   }
 }</code></pre>

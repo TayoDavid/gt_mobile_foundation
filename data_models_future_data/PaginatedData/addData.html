@@ -63,6 +63,10 @@
 
     </section>
     
+<section class="desc markdown">
+  <p>Combines the current data with another <code>pageData</code>, typically used when loading more items.</p>
+<p>If <code>ensureUnique</code> is true, duplicate items will be filtered out.</p>
+</section>
 
 
     
@@ -76,13 +80,14 @@
   List&lt;T&gt; items = [...data, ...pageData.data];
 
   if (ensureUnique) {
-    List&lt;T&gt; uniqueItems = [];
+    final seenUuids = &lt;dynamic&gt;{};
+    final uniqueItems = &lt;T&gt;[];
     for (final item in items) {
-      final index = _indexOf(uniqueItems, item);
-      if (index != -1) continue;
-      uniqueItems.add(item);
+      if (seenUuids.add(item.uuid)) {
+        uniqueItems.add(item);
+      }
     }
-    items = [...uniqueItems];
+    items = uniqueItems;
   }
 
   return PaginatedData(

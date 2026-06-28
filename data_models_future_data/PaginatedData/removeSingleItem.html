@@ -62,14 +62,17 @@
 
     </section>
     
+<section class="desc markdown">
+  <p>Removes a single <code>item</code> from the paginated data.</p>
+</section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">PaginatedData&lt;T&gt; removeSingleItem(T item) {
-  data.remove(item);
-  return PaginatedData(data: data, updatedAt: DateTime.now());
+  final items = [...data]..remove(item);
+  return PaginatedData(data: items, updatedAt: DateTime.now());
 }</code></pre>
 </section>
 

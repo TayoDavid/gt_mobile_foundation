@@ -62,14 +62,17 @@
 
     </section>
     
+<section class="desc markdown">
+  <p>Removes a single <code>item</code> from the list.</p>
+</section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">FutureListData&lt;T&gt; removeSingleItem(T item) {
-  data.remove(item);
-  return copyWith(data: data);
+  final items = [...data]..remove(item);
+  return copyWith(data: items);
 }</code></pre>
 </section>
 

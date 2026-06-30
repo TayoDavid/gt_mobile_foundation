@@ -65,6 +65,7 @@
   <dd>
     <ul class="gt-separated dark clazz-relationships">
       <li><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></li>
+        <li><a href="https://pub.dev/documentation/equatable/2.0.8/equatable/Equatable-class.html">Equatable</a></li>
         <li><a href="../data_models_future_data/AsyncData-class.html">AsyncData</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></li>
       <li>FutureListData</li>
     </ul>
@@ -89,14 +90,14 @@
           <span class="name"><a href="../data_models_future_data/FutureListData/FutureListData.html">FutureListData</a></span><span class="signature">({<span class="parameter" id="param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">data</span> = <span class="default-value">const []</span>, </span><span class="parameter" id="param-isLoading"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isLoading</span> = <span class="default-value">false</span>, </span><span class="parameter" id="param-error"><span class="type-annotation"><a href="../data_models_task_response/TaskError-class.html">TaskError</a>?</span> <span class="parameter-name">error</span>, </span><span class="parameter" id="param-updatedAt"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">updatedAt</span></span>})</span>
         </dt>
         <dd>
-          
+          Creates a new <a href="../data_models_future_data/FutureListData-class.html">FutureListData</a> instance.
             <div class="constructor-modifier features">const</div>
         </dd>
         <dt id="FutureListData.pristine" class="callable">
           <span class="name"><a href="../data_models_future_data/FutureListData/FutureListData.pristine.html">FutureListData.pristine</a></span><span class="signature">({<span class="parameter" id="pristine-param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">data</span> = <span class="default-value">const []</span>, </span><span class="parameter" id="pristine-param-isLoading"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isLoading</span> = <span class="default-value">false</span>, </span><span class="parameter" id="pristine-param-error"><span class="type-annotation"><a href="../data_models_task_response/TaskError-class.html">TaskError</a>?</span> <span class="parameter-name">error</span></span>})</span>
         </dt>
         <dd>
-          
+          Creates a pristine <a href="../data_models_future_data/FutureListData-class.html">FutureListData</a> instance, indicating it has not been modified.
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
@@ -168,7 +169,7 @@
 </dd>
 
         <dt id="hashCode" class="property inherited">
-  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="name"><a href="https://pub.dev/documentation/equatable/2.0.8/equatable/Equatable/hashCode.html">hashCode</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
   
 
@@ -210,8 +211,9 @@
 
 </dt>
 <dd>
-  
-  <div class="features"><span class="feature">no setter</span></div>
+  The list of properties that will be used to determine whether
+two instances are equal.
+  <div class="features"><span class="feature">no setter</span><span class="feature">override</span></div>
 
 </dd>
 
@@ -223,6 +225,19 @@
 </dt>
 <dd class="inherited">
   A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stringify" class="property inherited">
+  <span class="name"><a href="https://pub.dev/documentation/equatable/2.0.8/equatable/Equatable/stringify.html">stringify</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  If set to <code>true</code>, the <a href="https://pub.dev/documentation/equatable/2.0.8/equatable/Equatable/toString.html">toString</a> method will be overridden to output
+this instance's <a href="https://pub.dev/documentation/equatable/2.0.8/equatable/Equatable/props.html">props</a>.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
 
 </dd>
@@ -246,7 +261,7 @@
 
 </dt>
 <dd>
-  
+  A string representation of the update timestamp.
   <div class="features"><span class="feature">no setter</span></div>
 
 </dd>
@@ -347,7 +362,7 @@
     <h2>Operators</h2>
     <dl class="callables">
         <dt id="operator ==" class="callable inherited">
-  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+  <span class="name"><a href="https://pub.dev/documentation/equatable/2.0.8/equatable/Equatable/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
   </span>
   

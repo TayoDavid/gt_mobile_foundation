@@ -64,7 +64,7 @@
     
 <section class="desc markdown">
   <p>Executes an asynchronous network <code>func</code> and returns a <a href="../../data_models_task_response/TaskResponse-class.html">TaskResponse</a>.</p>
-<p>This wrapper catches <a href="https://pub.dev/documentation/dio/5.9.2/dio/DioException-class.html">DioException</a>, <a href="https://api.flutter.dev/flutter/dart-io/SocketException-class.html">SocketException</a>, <a href="https://api.flutter.dev/flutter/dart-async/TimeoutException-class.html">TimeoutException</a>,
+<p>This wrapper catches <a href="https://pub.dev/documentation/dio/5.10.0/dio/DioException-class.html">DioException</a>, <a href="https://api.flutter.dev/flutter/dart-io/SocketException-class.html">SocketException</a>, <a href="https://api.flutter.dev/flutter/dart-async/TimeoutException-class.html">TimeoutException</a>,
 and any other arbitrary errors, parses them, and returns a <a href="../../data_models_task_response/TaskFailure-class.html">TaskFailure</a>.
 If successful, it returns a <a href="../../data_models_task_response/TaskSuccess-class.html">TaskSuccess</a> containing the data of type <code>T</code>.</p>
 <p>In debug mode, it also logs the duration of the request.</p>

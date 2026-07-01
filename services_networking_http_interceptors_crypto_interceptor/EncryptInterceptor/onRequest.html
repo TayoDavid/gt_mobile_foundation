@@ -86,10 +86,16 @@ void onRequest(
     if (data is List || data is Map || data is String) {
       final encryptedData = await _getCiphertext(data);
       options = options.copyWith(
-        data: encryptedData,
+        data: {&quot;data&quot;: encryptedData},
         headers: {...options.headers, &quot;App-Tag&quot;: _encryptedAppTag},
       );
-      AppLogger.info(&quot;PlainText: $data -&gt; CipherText: $encryptedData&quot;);
+
+      AppLogger.info({
+        &quot;body&quot;: &quot;PlainText: $data -&gt; CipherText: $encryptedData&quot;,
+        &quot;params&quot;: options.queryParameters,
+        &quot;header&quot;: options.headers,
+        &quot;method&quot;: options.method,
+      });
     }
     return handler.next(options);
   } catch (e, t) {

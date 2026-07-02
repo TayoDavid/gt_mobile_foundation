@@ -91,6 +91,23 @@
 <li><strong>Extensions &amp; Utilities (<code>lib/extensions/</code>, <code>lib/utilities/</code>)</strong>: A rich suite of Dart extension methods (for Strings, Collections, Context, etc.) and global helper classes (like <code>AppLogger</code> and <code>AppHelpers</code>) that streamline everyday coding tasks.</li>
 <li><strong>Mixins &amp; Typedefs (<code>lib/mixins/</code>, <code>lib/typedefs/</code>)</strong>: Reusable behavioral traits (e.g., analytics tracking, HTTP handling) and standardized function signatures to enforce strict typing across projects.</li>
 </ul>
+<h3 id="rsa-public-key-providers">RSA Public Key Providers</h3>
+<p>The crypto layer now supports reusable RSA public-key path providers:</p>
+<ul>
+<li><code>RemoteRsaPublicKeyPathProvider</code>: downloads a PEM file with the existing HTTP service and caches it on disk.</li>
+<li><code>LocalRsaPublicKeyPathProvider</code>: copies a bundled asset PEM into a readable cache directory.</li>
+<li><code>TestRsaPublicKeyPathProvider</code>: returns an injected path for unit tests.</li>
+</ul>
+<p>Each provider returns a device file-system path that can be passed into the crypto service or injected directly into tests.</p>
+<p>Example registration with <code>GetIt</code>:</p>
+<pre class="language-dart"><code class="language-dart">locator.registerLazySingleton&lt;RsaPublicKeyPathProvider&gt;(
+  () =&gt; RemoteRsaPublicKeyPathProvider(
+    httpService: locator&lt;AppHttpService&gt;(),
+    endpoint: 'https://example.com/public_key.pem',
+    directory: locator&lt;Directory&gt;(),
+  ),
+);
+</code></pre>
 </section>
 
 
@@ -547,6 +564,34 @@
 
           <dt id="crypto_service_impl">
   <span class="name"><a href="services_crypto_crypto_service_impl/">services/crypto/crypto_service_impl</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="rsa_public_key_local_path_provider">
+  <span class="name"><a href="services_crypto_rsa_rsa_public_key_local_path_provider/">services/crypto/rsa/rsa_public_key_local_path_provider</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="rsa_public_key_path_provider">
+  <span class="name"><a href="services_crypto_rsa_rsa_public_key_path_provider/">services/crypto/rsa/rsa_public_key_path_provider</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="rsa_public_key_remote_path_provider">
+  <span class="name"><a href="services_crypto_rsa_rsa_public_key_remote_path_provider/">services/crypto/rsa/rsa_public_key_remote_path_provider</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="rsa_public_key_test_path_provider">
+  <span class="name"><a href="services_crypto_rsa_rsa_public_key_test_path_provider/">services/crypto/rsa/rsa_public_key_test_path_provider</a></span> 
 
 </dt>
 <dd>
@@ -1103,6 +1148,10 @@
       <li><a href="services_crypto_crypto/">services/crypto/crypto</a></li>
       <li><a href="services_crypto_crypto_service/">services/crypto/crypto_service</a></li>
       <li><a href="services_crypto_crypto_service_impl/">services/crypto/crypto_service_impl</a></li>
+      <li><a href="services_crypto_rsa_rsa_public_key_local_path_provider/">services/crypto/rsa/rsa_public_key_local_path_provider</a></li>
+      <li><a href="services_crypto_rsa_rsa_public_key_path_provider/">services/crypto/rsa/rsa_public_key_path_provider</a></li>
+      <li><a href="services_crypto_rsa_rsa_public_key_remote_path_provider/">services/crypto/rsa/rsa_public_key_remote_path_provider</a></li>
+      <li><a href="services_crypto_rsa_rsa_public_key_test_path_provider/">services/crypto/rsa/rsa_public_key_test_path_provider</a></li>
       <li><a href="services_firebase_config_config/">services/firebase_config/config</a></li>
       <li><a href="services_firebase_config_firebase_config/">services/firebase_config/firebase_config</a></li>
       <li><a href="services_fs_app_file_plugin/">services/fs/app_file_plugin</a></li>

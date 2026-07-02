@@ -57,6 +57,7 @@
       <span class="name ">AppCryptoServiceImpl</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="param-aesKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">aesKey</span>, </span></li>
 <li><span class="parameter" id="param-appTag"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appTag</span>, </span></li>
 <li><span class="parameter" id="param-rsaPublicKeyPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rsaPublicKeyPath</span>, </span></li>
+<li><span class="parameter" id="param-rsaPublicKeyPathProvider"><span class="type-annotation"><a href="../../services_crypto_rsa_rsa_public_key_path_provider/RsaPublicKeyPathProvider-class.html">RsaPublicKeyPathProvider</a>?</span> <span class="parameter-name">rsaPublicKeyPathProvider</span>, </span></li>
 <li><span class="parameter" id="param-tamperProof"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">tamperProof</span>, </span></li>
 </ol>})
     </section>
@@ -73,10 +74,11 @@
   required this.aesKey,
   required this.appTag,
   this.rsaPublicKeyPath,
+  this.rsaPublicKeyPathProvider,
   required this.tamperProof,
 }) {
   _aesCipher = Encrypter(AES(Key.fromUtf8(aesKey), mode: .gcm));
-  _initRsaCipher();
+  _rsaInitFuture = _initRsaCipher();
 }</code></pre>
 </section>
 

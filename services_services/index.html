@@ -370,6 +370,14 @@ development, or preview environments where persistent local storage is not requi
   An interceptor that manages JWT tokens, handling injection of device IDs, Auth Bearer tokens, and token renewal.
 </dd>
 
+          <dt id="LocalRsaPublicKeyPathProvider">
+  <span class="name "><a href="../services_crypto_rsa_rsa_public_key_local_path_provider/LocalRsaPublicKeyPathProvider-class.html">LocalRsaPublicKeyPathProvider</a></span> 
+
+</dt>
+<dd>
+  Loads an RSA public-key PEM from Flutter assets and caches it on disk.
+</dd>
+
           <dt id="LoggerInterceptor">
   <span class="name "><a href="../services_networking_http_interceptors_logger_interceptor/LoggerInterceptor-class.html">LoggerInterceptor</a></span> 
 
@@ -394,12 +402,44 @@ development, or preview environments where persistent local storage is not requi
   An interceptor that checks for active internet connection before executing a network request.
 </dd>
 
+          <dt id="RemoteRsaPublicKeyPathProvider">
+  <span class="name "><a href="../services_crypto_rsa_rsa_public_key_remote_path_provider/RemoteRsaPublicKeyPathProvider-class.html">RemoteRsaPublicKeyPathProvider</a></span> 
+
+</dt>
+<dd>
+  Downloads an RSA public-key PEM using the existing HTTP service and caches it locally.
+</dd>
+
+          <dt id="RsaPublicKeyPathProvider">
+  <span class="name "><a href="../services_crypto_rsa_rsa_public_key_path_provider/RsaPublicKeyPathProvider-class.html">RsaPublicKeyPathProvider</a></span> 
+
+</dt>
+<dd>
+  Describes a reusable source of a readable RSA public-key PEM file path.
+</dd>
+
+          <dt id="RsaPublicKeyPemValidator">
+  <span class="name "><a href="../services_crypto_rsa_rsa_public_key_path_provider/RsaPublicKeyPemValidator-class.html">RsaPublicKeyPemValidator</a></span> 
+
+</dt>
+<dd>
+  Validates RSA public-key PEM content without doing a full cryptographic parse.
+</dd>
+
           <dt id="ScreenShotService">
   <span class="name "><a href="../services_screen_shot_screen_shot_service/ScreenShotService-class.html">ScreenShotService</a></span> 
 
 </dt>
 <dd>
   A service for capturing screenshots of the application's UI, including long scrollable areas.
+</dd>
+
+          <dt id="TestRsaPublicKeyPathProvider">
+  <span class="name "><a href="../services_crypto_rsa_rsa_public_key_test_path_provider/TestRsaPublicKeyPathProvider-class.html">TestRsaPublicKeyPathProvider</a></span> 
+
+</dt>
+<dd>
+  Returns a pre-supplied RSA public-key path for unit tests.
 </dd>
 
           <dt id="VideoPlayerService">
@@ -517,6 +557,19 @@ development, or preview environments where persistent local storage is not requi
       </dl>
     </section>
 
+    <section class="summary offset-anchor" id="exceptions">
+      <h2>Exceptions / Errors</h2>
+      <dl>
+          <dt id="RsaPublicKeyPathProviderException">
+  <span class="name "><a href="../services_crypto_rsa_rsa_public_key_path_provider/RsaPublicKeyPathProviderException-class.html">RsaPublicKeyPathProviderException</a></span> 
+
+</dt>
+<dd>
+  Thrown when a public-key provider cannot return a valid PEM file path.
+</dd>
+
+      </dl>
+    </section>
   </div> <!-- /.main-content -->
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
@@ -598,6 +651,10 @@ development, or preview environments where persistent local storage is not requi
       <li><a href="../services_crypto_crypto/">services/crypto/crypto</a></li>
       <li><a href="../services_crypto_crypto_service/">services/crypto/crypto_service</a></li>
       <li><a href="../services_crypto_crypto_service_impl/">services/crypto/crypto_service_impl</a></li>
+      <li><a href="../services_crypto_rsa_rsa_public_key_local_path_provider/">services/crypto/rsa/rsa_public_key_local_path_provider</a></li>
+      <li><a href="../services_crypto_rsa_rsa_public_key_path_provider/">services/crypto/rsa/rsa_public_key_path_provider</a></li>
+      <li><a href="../services_crypto_rsa_rsa_public_key_remote_path_provider/">services/crypto/rsa/rsa_public_key_remote_path_provider</a></li>
+      <li><a href="../services_crypto_rsa_rsa_public_key_test_path_provider/">services/crypto/rsa/rsa_public_key_test_path_provider</a></li>
       <li><a href="../services_firebase_config_config/">services/firebase_config/config</a></li>
       <li><a href="../services_firebase_config_firebase_config/">services/firebase_config/firebase_config</a></li>
       <li><a href="../services_fs_app_file_plugin/">services/fs/app_file_plugin</a></li>

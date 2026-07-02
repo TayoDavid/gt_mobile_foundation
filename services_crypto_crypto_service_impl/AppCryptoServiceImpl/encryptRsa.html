@@ -79,10 +79,12 @@
   <pre class="language-dart"><code class="language-dart">@override
 String? encryptRsa(String data, {AppCryptoMode mode = .base16}) {
   try {
-    final encrypted = _rsaCipher?.encrypt(data);
+    final cipher = _rsaCipher;
+    if (cipher == null) return null;
+    final encrypted = cipher.encrypt(data);
     return switch (mode) {
-      .base16 =&gt; encrypted?.base16.upper,
-      .base64 =&gt; encrypted?.base64,
+      .base16 =&gt; encrypted.base16.upper,
+      .base64 =&gt; encrypted.base64,
     };
   } catch (e, t) {
     AppLogger.severe(&quot;RSA encryption failed: $e&quot;, stackTrace: t, error: e);

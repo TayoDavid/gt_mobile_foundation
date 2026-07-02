@@ -84,7 +84,7 @@
     <h2>Constructors</h2>
     <dl class="constructor-summary-list">
         <dt id="AppCryptoServiceImpl.new" class="callable">
-          <span class="name"><a href="../services_crypto_crypto_service_impl/AppCryptoServiceImpl/AppCryptoServiceImpl.html">AppCryptoServiceImpl</a></span><span class="signature">({<span class="parameter" id="param-aesKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">aesKey</span>, </span><span class="parameter" id="param-appTag"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appTag</span>, </span><span class="parameter" id="param-rsaPublicKeyPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rsaPublicKeyPath</span>, </span><span class="parameter" id="param-tamperProof"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">tamperProof</span></span>})</span>
+          <span class="name"><a href="../services_crypto_crypto_service_impl/AppCryptoServiceImpl/AppCryptoServiceImpl.html">AppCryptoServiceImpl</a></span><span class="signature">({<span class="parameter" id="param-aesKey"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">aesKey</span>, </span><span class="parameter" id="param-appTag"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">appTag</span>, </span><span class="parameter" id="param-rsaPublicKeyPath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rsaPublicKeyPath</span>, </span><span class="parameter" id="param-rsaPublicKeyPathProvider"><span class="type-annotation"><a href="../services_crypto_rsa_rsa_public_key_path_provider/RsaPublicKeyPathProvider-class.html">RsaPublicKeyPathProvider</a>?</span> <span class="parameter-name">rsaPublicKeyPathProvider</span>, </span><span class="parameter" id="param-tamperProof"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">tamperProof</span></span>})</span>
         </dt>
         <dd>
           Initializes the service with <code>aesKey</code>, <code>appTag</code>, and an optional <code>rsaPublicKeyPath</code>.
@@ -134,13 +134,25 @@
 </dd>
 
         <dt id="rsaPublicKeyPath" class="property">
-  <span class="name"><a href="../services_crypto_crypto_service_impl/AppCryptoServiceImpl/rsaPublicKeyPath.html">rsaPublicKeyPath</a></span>
+  <span class="name"><a class="deprecated" href="../services_crypto_crypto_service_impl/AppCryptoServiceImpl/rsaPublicKeyPath.html">rsaPublicKeyPath</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
   
 
 </dt>
 <dd>
   Optional file path to the RSA public key for asymmetric encryption.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="rsaPublicKeyPathProvider" class="property">
+  <span class="name"><a href="../services_crypto_crypto_service_impl/AppCryptoServiceImpl/rsaPublicKeyPathProvider.html">rsaPublicKeyPathProvider</a></span>
+  <span class="signature">&#8594; <a href="../services_crypto_rsa_rsa_public_key_path_provider/RsaPublicKeyPathProvider-class.html">RsaPublicKeyPathProvider</a>?</span>
+  
+
+</dt>
+<dd>
+  Optional provider that resolves the RSA public-key PEM file path.
   <div class="features"><span class="feature">final</span></div>
 
 </dd>
@@ -214,6 +226,19 @@ This is used to detect tampering with the encrypted data.
 </dt>
 <dd>
   Encrypts the provided <code>data</code> using RSA algorithm and specified <code>mode</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="init" class="callable">
+  <span class="name"><a href="../services_crypto_crypto_service_impl/AppCryptoServiceImpl/init.html">init</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Initializes any asynchronous crypto dependencies.
   <div class="features"><span class="feature">override</span></div>
 
 </dd>
